@@ -16,7 +16,7 @@ module.exports = {
   module: {
     rules: [
       { test: /\.s[ac]ss$/i, use: ["style-loader", "css-loader", "sass-loader"] },
-      { test: /\.(svg|png|ico|wepg|jpg|jpeg|gif)$/, use: ["asset/resource"] },
+      { test: /\.(svg|png|ico|wepg|jpg|jpeg|gifglb|gltf)$/, use: ["asset/resource"] },
     ],
   },
   devtool: "inline-source-map",
@@ -27,7 +27,7 @@ module.exports = {
       reconnect: true,
     },
     allowedHosts: ["127.0.0.1"],
-    port: 9996,
+    port: 3030,
     open: true,
     hot: true,
     liveReload: true,
