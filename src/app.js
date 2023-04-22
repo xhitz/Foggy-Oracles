@@ -18,7 +18,7 @@ bg.appendChild(renderer.domElement);
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-const light = new THREE.DirectionalLight("#7ed45a", 0.3);
+const light = new THREE.DirectionalLight("#dada01", 0.8);
 light.position.set(0, 15, 10);
 light.target.position.set(0, 0, -5);
 scene.add(light);
