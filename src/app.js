@@ -2,7 +2,7 @@ import "../public/app.scss";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-const devs = document.getElementById("dev-inf");
+// const devs = document.getElementById("dev-inf");
 const move = document.getElementById("move");
 const stage = document.getElementById("stage");
 const nav = document.getElementById("nav");
@@ -64,7 +64,7 @@ renderer.setAnimationLoop(animateBox);
 const show = (e) => {
   let em = nav.offsetHeight / 2.5;
   let dif = (100 / (move.offsetHeight - em)) * stage.scrollTop;
-  devs.innerHTML = "Stage :" + (stage.scrollTop / em).toFixed(2) + "em / " + stage.scrollTop + "px / " + dif.toFixed(2) + "% / " + (Number(move.offsetHeight) - em);
+  // devs.innerHTML = "Stage :" + (stage.scrollTop / em).toFixed(2) + "em / " + stage.scrollTop + "px / " + dif.toFixed(2) + "% / " + (Number(move.offsetHeight) - em);
   title1.style.paddingLeft = 30 - dif * 1 + "%";
   title2.style.paddingLeft = 60 - dif * 1 + "%";
   title3.style.paddingLeft = 90 - dif * 1 + "%";
