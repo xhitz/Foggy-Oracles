@@ -41,7 +41,7 @@ loader.load("../images/iii6.glb", (gltfScene) => {
 
 // const axesHelper = new THREE.AxesHelper(5);
 const boxGeo = new THREE.BoxGeometry(0.5, 0.4, 0.3);
-const boxMat = new THREE.MeshBasicMaterial({ color: 0x112233 });
+const boxMat = new THREE.MeshBasicMaterial({ color: "#543216" });
 const box = new THREE.Mesh(boxGeo, boxMat);
 // scene.add(axesHelper);
 // scene.add(box);
