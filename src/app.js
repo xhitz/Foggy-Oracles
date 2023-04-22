@@ -55,7 +55,7 @@ const animateBox = () => {
   renderer.render(scene, camera);
 };
 const paralax3d = () => {
-  camera.position.set((stage.style.width + window.event.clientX) / 180, (stage.style.height - window.event.clientY) / 180, 10);
+  camera.position.set((stage.style.width + window.event.clientX) / 180 + stage.style.width / 2, (stage.style.height - window.event.clientY) / 180 - stage.style.height / 2, 10);
 };
 // const controls = new OrbitControls(camera, renderer.domElement);
 
