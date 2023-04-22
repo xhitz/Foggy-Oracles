@@ -27,10 +27,10 @@ module.exports = {
       reconnect: true,
     },
     allowedHosts: ["127.0.0.1"],
-    port: 6060,
+    port: 9996,
     open: true,
     hot: true,
     liveReload: true,
   },
-  plugins: [new HtmlWebpackPlugin({ title: "Cool Froots", file: "index.html", template: "public/app.html" }), new CopyWebpackPlugin({ patterns: [{ from: "public/images", to: "images" }] }), new CopyWebpackPlugin({ patterns: [{ from: "public/json", to: "json" }] })],
+  plugins: [new HtmlWebpackPlugin({ title: "iii6 dev tribe", file: "index.html", template: "public/app.html" }), new CopyWebpackPlugin({ patterns: [{ from: "public/images", to: "images" }] }), new CopyWebpackPlugin({ patterns: [{ from: "public/json", to: "json" }] })],
 };
