@@ -2,6 +2,11 @@ import "../public/app.scss";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import Flip from "gsap/Flip";
+import Draggable from "gsap/Draggable";
+gsap.registerPlugin(ScrollTrigger, Draggable, Flip, MotionPathPlugin);
 // const devs = document.getElementById("dev-inf");
 const move = document.getElementById("move");
 const stage = document.getElementById("stage");
@@ -35,7 +40,6 @@ loader.load("../images/iii6.glb", (gltfScene) => {
   iii6model.position.x = 0;
   iii6model.position.y = 0;
   iii6model.position.z = -5;
-  iii6model.add(material);
   scene.add(iii6model);
 });
 
@@ -71,5 +75,6 @@ const show = (e) => {
   title4.style.paddingLeft = 120 - dif * 1 + "%";
   title5.style.paddingLeft = 150 - dif * 1 + "%";
 };
+gsap.from(".show", { ease: "power", fontSize: "5em", delay: 3, opacity: 0.3 });
 stage.addEventListener("scroll", show);
 document.body.addEventListener("mousemove", paralax3d);
