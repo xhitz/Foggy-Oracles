@@ -12,6 +12,7 @@ const title2 = document.getElementById("title2");
 const title3 = document.getElementById("title3");
 const title4 = document.getElementById("title4");
 const title5 = document.getElementById("title5");
+/*
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 bg.appendChild(renderer.domElement);
@@ -61,15 +62,17 @@ const paralax3d = () => {
 
 renderer.setAnimationLoop(animateBox);
 // renderer.render(scene, camera);
+*/
+
 const show = (e) => {
   let em = nav.offsetHeight / 2.5;
   let dif = (100 / (move.offsetHeight - em)) * stage.scrollTop;
   // devs.innerHTML = "Stage :" + (stage.scrollTop / em).toFixed(2) + "em / " + stage.scrollTop + "px / " + dif.toFixed(2) + "% / " + (Number(move.offsetHeight) - em);
-  title1.style.paddingLeft = 30 - dif * 1 + "%";
-  title2.style.paddingLeft = 60 - dif * 1 + "%";
-  title3.style.paddingLeft = 90 - dif * 1 + "%";
-  title4.style.paddingLeft = 120 - dif * 1 + "%";
-  title5.style.paddingLeft = 150 - dif * 1 + "%";
+  title1.style.paddingLeft = 20 - dif * 1 + "%";
+  title2.style.paddingLeft = 40 - dif * 1 + "%";
+  title3.style.paddingLeft = 60 - dif * 1 + "%";
+  title4.style.paddingLeft = 80 - dif * 1 + "%";
+  title5.style.paddingLeft = 100 - dif * 1 + "%";
 };
 stage.addEventListener("scroll", show);
 document.body.addEventListener("mousemove", paralax3d);

@@ -26,17 +26,18 @@ body {
   top: 0;
   left: 0;
   z-index: 0;
+  background-color: rgb(26, 0, 48);
 }
 #nav {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 2.5em;
+  height: 4.5em;
   overflow: scroll;
   padding: 1 5 9 11;
   margin: 5px 0px 0px 0px;
-  background: #272727;
+  background: rgb(118, 28, 182);
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 1em;
   grid-gap: 1em;
@@ -44,13 +45,13 @@ body {
 }
 #logo {
   margin: 0.25em 0 0 2em;
-  height: 2em;
-  width: 2em;
-  background: #363636;
+  height: 4em;
+  width: 6em;
+  background: rgb(118, 28, 182);
   border-radius: 9px;
 }
 #logoimg {
-  height: 2em;
+  height: 4em;
   border-radius: 9px;
 }
 .bar {
@@ -73,7 +74,7 @@ body {
 }
 .link {
   padding: 0.5em;
-  background: #363636;
+  background: rgb(118, 28, 182);
   border-radius: 9px;
   height: 2em;
   margin: 0.25em 0 0 0;
