@@ -58,6 +58,9 @@ body {
   background: rgb(118, 28, 182);
   border-radius: 9px;
 }
+#logo:hover {
+  background: white;
+}
 #logoimg {
   height: 4em;
   border-radius: 9px;
@@ -193,4 +196,13 @@ body {
   border-radius: 9px;
   padding-top: 0.2em;
   height: 200px;
+}
+#dev-inf {
+  position: absolute;
+  width: 20%;
+  z-index: 1001;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0);
+  display: none;
 }

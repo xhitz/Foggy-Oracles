@@ -13,6 +13,11 @@ const title3 = document.getElementById("txtbox3");
 const title4 = document.getElementById("txtbox4");
 const title5 = document.getElementById("txtbox5");
 const clock = document.getElementById("mintclock");
+const logo = document.getElementById("logo");
+const premint = document.getElementById("premint");
+const gomission = document.getElementById("gomission");
+const goteam = document.getElementById("goteam");
+const gostamp = document.getElementById("gostamp");
 let countDownDate = new Date("Aug 17, 2023 20:00:00").getTime();
 const setCD = () => {
   let now = new Date().getTime();
@@ -89,5 +94,25 @@ const show = (e) => {
   title5.style.left = -200 + (10 - dif * 1) + "%";
 };
 stage.addEventListener("scroll", show);
+const home = (e) => {
+  stage.scrollTop = 0;
+};
+logo.addEventListener("click", home);
+const mint = (e) => {
+  stage.scrollTop = 1000;
+};
+premint.addEventListener("click", mint);
+const mission = (e) => {
+  stage.scrollTop = 2000;
+};
+gomission.addEventListener("click", mission);
+const team = (e) => {
+  stage.scrollTop = 3000;
+};
+goteam.addEventListener("click", team);
+const stampede = (e) => {
+  stage.scrollTop = 4000;
+};
+gostamp.addEventListener("click", stampede);
 
 // document.body.addEventListener("mousemove", paralax3d);
