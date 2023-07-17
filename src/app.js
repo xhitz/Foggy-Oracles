@@ -1,23 +1,23 @@
 import "../public/app.scss";
-import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+// import * as THREE from "three";
+// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+// import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 // const devs = document.getElementById("dev-inf");
 const move = document.getElementById("move");
 const stage = document.getElementById("stage");
 const nav = document.getElementById("nav");
 const bg = document.getElementById("bg");
-const title1 = document.getElementById("title1");
-const title2 = document.getElementById("title2");
-const title3 = document.getElementById("title3");
-const title4 = document.getElementById("title4");
-const title5 = document.getElementById("title5");
+const title1 = document.getElementById("txtbox1");
+const title2 = document.getElementById("txtbox2");
+const title3 = document.getElementById("txtbox3");
+const title4 = document.getElementById("txtbox4");
+const title5 = document.getElementById("txtbox5");
 const clock = document.getElementById("mintclock");
 let countDownDate = new Date("Aug 17, 2023 20:00:00").getTime();
 const setCD = () => {
   let now = new Date().getTime();
   let distance = countDownDate - now;
-  console.log("watch", countDownDate);
+  // console.log("watch", countDownDate);
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -76,17 +76,18 @@ const paralax3d = () => {
 
 renderer.setAnimationLoop(animateBox);
 // renderer.render(scene, camera);
-*/
+// */
 
 const show = (e) => {
   let em = nav.offsetHeight / 2.5;
   let dif = (100 / (move.offsetHeight - em)) * stage.scrollTop;
   // devs.innerHTML = "Stage :" + (stage.scrollTop / em).toFixed(2) + "em / " + stage.scrollTop + "px / " + dif.toFixed(2) + "% / " + (Number(move.offsetHeight) - em);
-  title1.style.paddingLeft = 20 - dif * 1 + "%";
-  title2.style.paddingLeft = 40 - dif * 1 + "%";
-  title3.style.paddingLeft = 60 - dif * 1 + "%";
-  title4.style.paddingLeft = 80 - dif * 1 + "%";
-  title5.style.paddingLeft = 100 - dif * 1 + "%";
+  title1.style.left = -200 + (10 - dif * 1) + "%";
+  title2.style.left = -200 + (10 - dif * 1) + "%";
+  title3.style.left = -200 + (10 - dif * 1) + "%";
+  title4.style.left = -200 + (10 - dif * 1) + "%";
+  title5.style.left = -200 + (10 - dif * 1) + "%";
 };
 stage.addEventListener("scroll", show);
-document.body.addEventListener("mousemove", paralax3d);
+
+// document.body.addEventListener("mousemove", paralax3d);
