@@ -132,11 +132,12 @@ body {
 #sloganbox {
   grid-column: 2/5;
   font-size: 9em;
-  background: white;
-  color: rgb(118, 28, 182);
+  color: white;
+  background: rgb(118, 28, 182);
   text-align: center;
   border-radius: 9px;
   padding-top: 0.2em;
+  height: 200px;
 }
 #dev-inf {
   position: absolute;
