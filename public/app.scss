@@ -141,6 +141,23 @@ body {
 #mintclock {
   color: rgb(118, 28, 182);
 }
+#teambox {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  grid-gap: 1em;
+}
+#teamtab {
+  background: white;
+  height: 190px;
+  border-radius: 50%;
+  margin-top: 1em;
+  grid-column: 1;
+}
+#teamtxt {
+  height: 190px;
+  width: auto;
+  grid-column: 2;
+}
 #sloganbox {
   grid-column: 2/5;
   font-size: 9em;
