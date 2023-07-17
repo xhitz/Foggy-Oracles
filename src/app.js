@@ -12,6 +12,20 @@ const title2 = document.getElementById("title2");
 const title3 = document.getElementById("title3");
 const title4 = document.getElementById("title4");
 const title5 = document.getElementById("title5");
+const clock = document.getElementById("mintclock");
+let countDownDate = new Date("Aug 17, 2023 20:00:00").getTime();
+const setCD = () => {
+  let now = new Date().getTime();
+  let distance = countDownDate - now;
+  console.log("watch", countDownDate);
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  // Display the result in the element with id="demo"
+  clock.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+};
+setInterval(setCD, 1000);
 /*
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
