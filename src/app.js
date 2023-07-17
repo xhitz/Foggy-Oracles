@@ -87,11 +87,11 @@ const show = (e) => {
   let em = nav.offsetHeight / 2.5;
   let dif = (100 / (move.offsetHeight - em)) * stage.scrollTop;
   devs.innerHTML = "Stage :" + (stage.scrollTop / em).toFixed(2) + "em / " + stage.scrollTop + "px / " + dif.toFixed(2) + "% / " + (Number(move.offsetHeight) - em);
-  title1.style.left = -200 + (10 - dif * 1) + "%";
-  title2.style.left = -200 + (10 - dif * 1) + "%";
-  title3.style.left = -200 + (10 - dif * 1) + "%";
-  title4.style.left = -200 + (10 - dif * 1) + "%";
-  title5.style.left = -200 + (10 - dif * 1) + "%";
+  title1.style.left = -200 + (20 - dif * 1) + "%";
+  title2.style.left = -200 + (20 - dif * 1) + "%";
+  title3.style.left = -200 + (20 - dif * 1) + "%";
+  title4.style.left = -200 + (20 - dif * 1) + "%";
+  title5.style.left = -200 + (20 - dif * 1) + "%";
 };
 stage.addEventListener("scroll", show);
 const home = (e) => {
@@ -99,19 +99,20 @@ const home = (e) => {
 };
 logo.addEventListener("click", home);
 const mint = (e) => {
-  stage.scrollTop = 1000;
+  stage.scrollTop = window.innerHeight;
 };
 premint.addEventListener("click", mint);
 const mission = (e) => {
-  stage.scrollTop = 2000;
+  stage.scrollTop = window.innerHeight * 2;
 };
 gomission.addEventListener("click", mission);
 const team = (e) => {
-  stage.scrollTop = 3000;
+  stage.scrollTop = window.innerHeight * 3;
 };
 goteam.addEventListener("click", team);
 const stampede = (e) => {
-  stage.scrollTop = 4000;
+  console.log();
+  stage.scrollTop = window.innerHeight * 4;
 };
 gostamp.addEventListener("click", stampede);
 

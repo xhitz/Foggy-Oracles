@@ -43,7 +43,7 @@ body {
   overflow: hidden;
   padding: 1 5 9 11;
   margin: 0px 0px 0px 0px;
-  background: rgb(118, 28, 182);
+  background: rgba(118, 28, 182, 0.8);
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 1em;
   grid-gap: 1em;
@@ -114,7 +114,7 @@ body {
 .title {
   position: relative;
   top: 0em;
-
+  transform: rotate(2deg);
   grid-column: 1/-1;
   width: 100%;
   height: 2em;
@@ -142,7 +142,7 @@ body {
   top: 0em;
   grid-column: 1/-1;
   width: 100%;
-  height: calc(20% - 1.08em);
+  height: calc(20% - 6em);
   padding: 2em;
   color: white;
   overflow: hidden;
@@ -161,6 +161,11 @@ body {
 }
 #col3 {
   grid-column: 4;
+  text-align: center;
+}
+#all {
+  grid-column: 2/5;
+  height: 190px;
   text-align: center;
 }
 #intro_txt {
