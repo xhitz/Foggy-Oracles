@@ -23,7 +23,7 @@ body {
   overflow: hidden;
   padding: 0;
   margin: 0;
-  background-color: rgb(26, 0, 48);
+  background: rgb(33, 22, 44);
 }
 #bg {
   width: 100%;
@@ -32,7 +32,7 @@ body {
   top: 0;
   left: 0;
   z-index: 0;
-  background-color: rgb(26, 0, 48);
+  background: rgb(66, 43, 89);
 }
 #nav {
   position: absolute;
@@ -186,6 +186,7 @@ body {
   border-radius: 50%;
   margin-top: 1em;
   grid-column: 1;
+  overflow: hidden;
 }
 #teamtxt {
   height: 190px;
