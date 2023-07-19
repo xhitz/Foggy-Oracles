@@ -163,6 +163,11 @@ body {
   grid-column: 4;
   text-align: center;
 }
+#dubcol {
+  grid-column: 2/4;
+  height: 230px;
+}
+
 #all {
   grid-column: 2/5;
   height: 190px;
