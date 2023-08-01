@@ -29,9 +29,6 @@ body {
   top: 0;
   left: 0;
   z-index: 0;
-  background-image: url("https://ipfs.io/ipfs/QmQWu3ZjXvEXqzqSyRxW5CEeZotqk3zx8BBAkeW7mLmcWN");
-  background-size: contain;
-  background-repeat: no-repeat;
   background-color: black;
   background-position-x: center;
 }
@@ -44,7 +41,7 @@ body {
   overflow: scroll;
   padding: 1 5 9 11;
   margin: 0px 0px 0px 0px;
-  background: rgb(118, 28, 182);
+  background: black;
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 1em;
   grid-gap: 1em;
@@ -54,7 +51,7 @@ body {
   margin: 0.25em 0 0 2em;
   height: 2em;
   width: 6em;
-  background: rgb(118, 28, 182);
+  background: black;
   border-radius: 9px;
 }
 #logoimg {
@@ -81,7 +78,7 @@ body {
 }
 .link {
   padding: 0em;
-  background: rgb(118, 28, 182);
+  background: black;
   border-radius: 9px;
   height: 2em;
   margin: 0 0 0 0;
