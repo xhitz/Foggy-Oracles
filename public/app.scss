@@ -89,15 +89,48 @@ body {
   color: lightgrey;
   font-size: 1.5em;
 }
-#create {
+#create1 {
   color: cyan;
   background: rgb(118, 28, 182);
+  width: 50%;
   border: 0;
   border-radius: 9px;
   font-size: 3em;
   padding: 0.2em;
-  margin-top: 2em;
+  margin-top: 2.2em;
+  margin-left: 0;
   z-index: 900;
+}
+#create1:hover {
+  margin-left: 0.5em;
+}
+#create2 {
+  background: cyan;
+  color: rgb(118, 28, 182);
+  border: 0;
+  border-radius: 9px;
+  font-size: 3em;
+  padding: 0.2em;
+  margin-top: 2.2em;
+  margin-left: 2.2em;
+  z-index: 900;
+}
+#create2:hover {
+  margin-left: 2.7em;
+}
+#create3 {
+  background: white;
+  color: rgb(118, 28, 182);
+  border: 0;
+  border-radius: 9px;
+  font-size: 3em;
+  padding: 0.2em;
+  margin-top: 2.2em;
+  margin-left: 4.4em;
+  z-index: 900;
+}
+#create3:hover {
+  margin-left: 4.7em;
 }
 #move {
   height: 500%;
