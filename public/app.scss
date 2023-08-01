@@ -29,6 +29,7 @@ body {
   top: 0;
   left: 0;
   z-index: 0;
+  background-image: url();
   background-color: black;
   background-position-x: center;
 }
@@ -53,10 +54,18 @@ body {
   width: 6em;
   background: black;
   border-radius: 9px;
+  color: #ffcc00;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 2em 1fr;
 }
-#logoimg {
+#logoimg,
+#logotxt {
   height: 2em;
-  border-radius: 9px;
+  float: left;
+}
+#logotxt {
+  font-size: 1.7em;
 }
 .bar {
   display: grid;
@@ -87,8 +96,8 @@ body {
   font-size: 1.5em;
 }
 #create {
-  color: cyan;
-  background: rgb(118, 28, 182);
+  color: #008000;
+  background: #d40000;
   border: 0;
   border-radius: 9px;
   font-size: 3em;
@@ -117,8 +126,8 @@ body {
   width: 200%;
   height: 2em;
   padding: 0.4em 0 0 30%;
-  color: rgb(118, 28, 182);
-  background: cyan;
+  color: #d40000;
+  background: #008000;
   z-index: 100;
 }
 .show {
@@ -128,7 +137,7 @@ body {
   width: 100%;
   height: calc(20% - 1.08em);
   padding: 2em;
-  color: white;
+  color: #ffcc00;
   overflow: hidden;
   scroll-behavior: smooth;
 }
@@ -140,32 +149,33 @@ body {
   margin-top: -2em;
 }
 #title1 {
-  color: cyan;
-  background: rgb(118, 28, 182);
+  color: #008000;
+  background: #d40000;
 }
 #bg1 {
-  background: black;
-  color: cyan;
+  background: #ffcc00;
+  color: #008000;
 }
 #bg2 {
-  background: cyan;
-  color: rgb(118, 28, 182);
+  background: #008000;
+  color: #d40000;
 }
 #title2 {
-  background: cyan;
-  color: rgb(118, 28, 182);
+  background: #008000;
+  color: #ffcc00;
 }
 
 #title3 {
-  background: white;
+  background: #d40000;
+  color: #008000;
 }
 #bg3 {
-  background: rgb(118, 28, 182);
-  color: cyan;
+  background: #d40000;
+  color: #008000;
 }
 #title4 {
   background: black;
-  color: cyan;
+  color: #008000;
 }
 
 #title1,
