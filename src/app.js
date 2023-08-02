@@ -75,4 +75,4 @@ const show = (e) => {
   title5.style.paddingLeft = 100 - dif * 1 + "%";
 };
 stage.addEventListener("scroll", show);
-document.body.addEventListener("mousemove", paralax3d);
+// document.body.addEventListener("mousemove", paralax3d);

@@ -157,11 +157,32 @@ body {
   grid-template-rows: 1fr 2fr;
   grid-gap: 1em;
 }
-#dias {
+#diasbox {
   grid-row: 2;
-  grid-column: 2;
-
-  justify-content: center;
+  grid-column: 1/-1;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+}
+#cbbox,
+#dojobox,
+#vbbox {
+  text-align: center;
+  color: rgb(118, 28, 182);
+  font-size: 1.5em;
+  border: 1px solid white;
+  padding: 1em;
+  border-radius: 9px;
+  background: rgba(white, 0.5);
+}
+#cbbox:hover,
+#dojobox:hover,
+#vbbox:hover {
+  background: rgb(118, 28, 182);
+  color: white;
+}
+#dias {
+  width: 33%;
 }
 #move {
   height: 500%;
@@ -169,6 +190,23 @@ body {
   scroll-behavior: smooth;
 
   overflow: hidden;
+}
+#usermail {
+  font-size: 1.5em;
+  border-radius: 9px;
+  color: rgb(118, 28, 182);
+  background: rgba(white, 0.5);
+  text-align: center;
+}
+#joinmailer {
+  grid-column: 2/-1;
+}
+#join {
+  background: rgb(118, 28, 182);
+  color: white;
+  margin-left: 1em;
+  padding: 0.5em;
+  border-radius: 9px;
 }
 #starter {
   position: relative;
@@ -216,7 +254,7 @@ body {
   color: cyan;
 }
 #bg2 {
-  background: cyan;
+  background: rgba(cyan, 0.8);
   color: rgb(118, 28, 182);
 }
 #title2 {
