@@ -12,6 +12,10 @@ i {
 a {
   text-decoration: none;
 }
+img {
+  width: 300px;
+  max-width: 100%;
+}
 body {
   position: absolute;
   top: 0;
@@ -131,6 +135,33 @@ body {
 }
 #create3:hover {
   margin-left: 4.7em;
+}
+#apply {
+  font-size: 3em;
+  border-radius: 9px;
+  background: cyan;
+  color: rgb(118, 28, 182);
+  padding: 0.2em;
+}
+#learn {
+  font-size: 3em;
+  border-radius: 9px;
+  background: white;
+  color: rgb(118, 28, 182);
+  padding: 0.2em;
+}
+#build {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-gap: 1em;
+}
+#dias {
+  grid-row: 2;
+  grid-column: 2;
+
+  justify-content: center;
 }
 #move {
   height: 500%;
