@@ -16,6 +16,11 @@ img {
   width: 300px;
   max-width: 100%;
 }
+.icon {
+  margin-top: 0.5em;
+  height: 18px;
+  width: 18px;
+}
 body {
   position: absolute;
   top: 0;
@@ -90,8 +95,11 @@ body {
   height: 2em;
   margin: 0 0 0 0;
   font-weight: 900;
-  color: lightgrey;
-  font-size: 1.5em;
+  color: white;
+  font-size: 1.3em;
+}
+.ltxt {
+  margin-left: 0.5em;
 }
 #create1 {
   color: cyan;
