@@ -42,7 +42,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-color: black;
-  background-position-x: center;
+  background-position: center center;
 }
 #nav {
   position: absolute;
@@ -97,6 +97,25 @@ body {
   font-weight: 900;
   color: white;
   font-size: 1.3em;
+}
+#landingpage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 250px 1fr 1fr;
+  grid-gap: 1em;
+}
+#slogan {
+  grid-row: 1;
+  grid-column: 3;
+  margin-left: 0;
+  font-size: 4em;
+  font-weight: 900;
+  text-align: end;
+  color: rgb(118, 28, 182);
+}
+#pagenav {
+  grid-row: 3;
+  grid-column: 1/-1;
 }
 .ltxt {
   margin-left: 0.5em;
@@ -247,7 +266,7 @@ body {
   padding: 0.5em;
 }
 #joinmailer {
-  grid-column: 3/-1;
+  grid-column: 3;
   background: rgb(118, 28, 182);
   color: white;
   padding: 1em;
@@ -341,166 +360,68 @@ body {
   background: rgba(255, 255, 255, 0);
   display: none;
 }
-#slogan {
-  font-size: 2em;
-}
 
-@media only screen and (max-width: 750px) {
-  #bg {
-    background-position-x: center;
-    background-position-y: bottom;
+#market {
+  grid-column: 2;
+}
+@media only screen and (max-width: 1370px) {
+  .bar {
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  img {
-    width: 88px;
-    max-width: 100%;
-  }
-  #build {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 1em;
-  }
-  #build2 {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 2fr;
-    grid-gap: 1em;
-  }
-  #build0 {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-gap: 1em;
-  }
-  #diasbox {
-    grid-row: 4;
-  }
-  #split {
-  }
-  #joinmailer {
-    grid-column: 1/-1;
-  }
-  #usermailer {
-    font-size: 1.5em;
-    border-radius: 9px;
-    color: rgb(118, 28, 182);
-    background: white;
-    text-align: center;
-    grid-column: 1/-1;
-  }
-  #create1,
-  #create2,
-  #create3 {
-    font-size: 1.7em;
-  }
-  #learn,
-  #apply,
-  #diasbox,
-  #dojobox,
-  #cbbox,
-  #vbbox {
-    font-size: 1em;
-  }
-  #dojobox,
-  #cbbox,
-  #vbbox {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-gap: 1em;
-  }
-  #diastxt {
-    font-size: 1.5em;
-  }
-  #slogan {
-    font-size: 2em;
-  }
-  #defi {
-    display: none;
+  #market {
+    grid-column: 1;
   }
 }
-@media only screen and (max-width: 440px) {
-  h1 {
-    font-size: 1.4em;
+@media only screen and (max-width: 1035px) {
+  .bar {
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  #logo {
-    margin: 0.25em 0 0 2em;
-    height: 2em;
-    width: 3em;
-    background: rgb(118, 28, 182);
-    border-radius: 9px;
+  #market {
+    grid-column: 1;
   }
-  #logoimg {
-    height: 2em;
-    width: 3em;
-    border-radius: 9px;
-    max-width: 100%;
+  .ltxt {
+    font-size: 0.7em;
   }
+}
+@media only screen and (max-width: 870px) {
   #bg {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    background-image: none;
-    background-color: black;
+    background-position: center center;
   }
-  img {
-    width: 66px;
-    max-width: 100%;
+}
+@media only screen and (max-width: 830px) {
+  .bar {
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  #build {
-    width: 100%;
-    display: grid;
+  #market {
+    grid-column: 1;
+  }
+  .ltxt {
+    font-size: 0;
+    width: 0;
+    display: none;
+  }
+  #build0,
+  #build,
+  #build1 {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 1em;
   }
-  #build2 {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 2fr;
-    grid-gap: 1em;
-  }
-  #build0 {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-gap: 1em;
+  #joinmailer,
+  #usermailer,
+  #dojobox,
+  #cbbox,
+  #vbbox {
+    grid-column: 1/-1;
   }
   #diasbox {
     grid-row: 4;
   }
-  #joinmailer {
-    grid-column: 1/-1;
-  }
-  #usermailer {
-    font-size: 1.2em;
-    border-radius: 9px;
-    color: rgb(118, 28, 182);
-    background: white;
-    text-align: center;
-    grid-column: 1/-1;
-  }
-  #create1,
-  #create2,
-  #create3 {
-    font-size: 1.4em;
-  }
-  #learn,
-  #apply,
-  #diastxt {
-    font-size: 1.2em;
-  }
-  #slogan {
-    font-size: 4em;
-  }
-  #defi {
-    display: none;
+  #cb,
+  #dojo,
+  #vb,
+  #vrl,
+  #froots,
+  #yaard {
+    width: 122px;
+    height: 122px;
   }
 }
