@@ -18,7 +18,7 @@ const premint = document.getElementById("premint");
 const gomission = document.getElementById("gomission");
 const goteam = document.getElementById("goteam");
 const gostamp = document.getElementById("gostamp");
-let countDownDate = new Date("Aug 17, 2023 20:00:00").getTime();
+let countDownDate = new Date("Aug 24, 2023 20:00:00").getTime();
 const setCD = () => {
   let now = new Date().getTime();
   let distance = countDownDate - now;
