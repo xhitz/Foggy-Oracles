@@ -32,5 +32,5 @@ module.exports = {
     hot: true,
     liveReload: true,
   },
-  plugins: [new HtmlWebpackPlugin({ title: "decentral interactive asset standard", file: "index.html", template: "public/app.html" }), new CopyWebpackPlugin({ patterns: [{ from: "public/images", to: "images" }] }), new CopyWebpackPlugin({ patterns: [{ from: "public/json", to: "json" }] })],
+  plugins: [new HtmlWebpackPlugin({ title: "cbdream.world", file: "index.html", template: "public/app.html" }), new CopyWebpackPlugin({ patterns: [{ from: "public/images", to: "images" }] }), new CopyWebpackPlugin({ patterns: [{ from: "public/json", to: "json" }] })],
 };
