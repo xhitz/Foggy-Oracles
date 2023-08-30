@@ -1,5 +1,16 @@
 import "../public/app.scss";
+<<<<<<< Updated upstream
 import ethers from "ethers";
+=======
+import * as THREE from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import Flip from "gsap/Flip";
+import Draggable from "gsap/Draggable";
+gsap.registerPlugin(ScrollTrigger, Draggable, Flip);
+>>>>>>> Stashed changes
 
 const devs = document.getElementById("dev-inf");
 const move = document.getElementById("move");
