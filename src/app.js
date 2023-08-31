@@ -1,7 +1,5 @@
 import "../public/app.scss";
-<<<<<<< Updated upstream
 import ethers from "ethers";
-=======
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
@@ -10,8 +8,14 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import Flip from "gsap/Flip";
 import Draggable from "gsap/Draggable";
 gsap.registerPlugin(ScrollTrigger, Draggable, Flip);
->>>>>>> Stashed changes
+/*
+const sdk = require("api")("@fortress/v1.0#keedbllp9wkys");
 
+sdk
+  .getApiOrganizationV1CurrentOrganization()
+  .then(({ data }) => console.log(data))
+  .catch((err) => console.error(err));
+*/
 const devs = document.getElementById("dev-inf");
 const move = document.getElementById("move");
 const stage = document.getElementById("stage");

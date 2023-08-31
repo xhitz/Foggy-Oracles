@@ -41,6 +41,7 @@
     "@uauth/js": "^1.1.0",
     "@zondax/filecoin-solidity": "^4.0.2",
     "accelerometer": "^1.2.0",
+    "api": "^6.1.1",
     "bignumber": "^1.1.0",
     "copy-webpack-plugin": "^11.0.0",
     "crypto-hash": "^2.0.1",
