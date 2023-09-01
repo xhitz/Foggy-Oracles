@@ -40,6 +40,7 @@ body {
   overflow-y: scroll;
   background: none;
   scroll-behavior: smooth;
+  text-align: center;
 }
 
 #move {
@@ -63,4 +64,7 @@ body {
 .showimg {
   max-width: 100%;
   height: auto;
+}
+#booking {
+  color: white;
 }
