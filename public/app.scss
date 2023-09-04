@@ -85,7 +85,7 @@ body {
   height: auto;
 }
 .tabimg:hover {
-  width: 85%;
+  width: 83%;
   height: auto;
 }
 #diasTab {
@@ -97,12 +97,17 @@ body {
   grid-column: 2;
   grid-row: 2;
   overflow: hidden;
-  padding-top: 30px;
 }
 #vanByteTab {
   grid-column: 3;
   grid-row: 2;
   overflow: hidden;
+}
+#title {
+  grid-column: 1/-1;
+  font-size: 3em;
+  color: black;
+  font-weight: 900;
 }
 #booking {
   color: white;
