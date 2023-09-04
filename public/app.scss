@@ -28,7 +28,10 @@ body {
   z-index: 0;
   background-color: #141414;
 }
-
+#p0x {
+  width: 80%;
+  margin-left: 10%;
+}
 .stage {
   position: absolute;
   top: 0;
@@ -46,7 +49,6 @@ body {
   height: auto;
   width: 100%;
   scroll-behavior: smooth;
-  pointer-events: none;
 }
 
 .show {
