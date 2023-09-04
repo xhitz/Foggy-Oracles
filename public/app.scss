@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@200;800");
 * {
   box-sizing: border-box;
-  font-family: "Courier", sans-serif;
+  font-family: "Changa", sans-serif;
 }
 html {
   scroll-behavior: smooth;
@@ -80,34 +81,93 @@ body {
   grid-gap: 1em;
   padding: 2em;
 }
-.tabimg {
+.tabimg,
+.tab {
   width: 80%;
   height: auto;
+  margin-left: 10%;
 }
-.tabimg:hover {
-  width: 83%;
+.tabimg:hover,
+.tab:hover {
+  width: 82%;
   height: auto;
+  margin-left: 9%;
+}
+#diasCard {
+  background: cornflowerblue;
+  color: white;
+  border-radius: 9px;
+  padding: 1em;
+}
+#dojoCard {
+  background: mediumaquamarine;
+  color: white;
+  border-radius: 9px;
+  padding: 1em;
+}
+#vbCard {
+  background: coral;
+  color: white;
+  border-radius: 9px;
+  padding: 1em;
 }
 #diasTab {
   grid-column: 1;
   grid-row: 2;
   overflow: hidden;
+  text-decoration: none;
 }
 #dojoTab {
   grid-column: 2;
   grid-row: 2;
   overflow: hidden;
+  text-decoration: none;
 }
 #vanByteTab {
   grid-column: 3;
   grid-row: 2;
   overflow: hidden;
+  text-decoration: none;
 }
 #title {
   grid-column: 1/-1;
-  font-size: 3em;
+  font-size: 4em;
   color: black;
-  font-weight: 900;
+  font-weight: 800;
+  padding: 0;
+  margin: 0;
+}
+
+.tabTitle {
+  font-size: 2.5em;
+  color: white;
+  font-weight: 800;
+  line-height: 0.8em;
+  text-align: left;
+  text-decoration: none;
+}
+.proTitle {
+  font-size: 2.5em;
+  color: white;
+  font-weight: 800;
+  line-height: 0.8em;
+  text-align: center;
+  text-decoration: none;
+}
+.tabImg {
+  width: 90%;
+  margin-top: 1em;
+  padding: 1em;
+}
+.tabTxt {
+  font-size: 1em;
+  color: white;
+  font-weight: 200;
+  line-height: 0.8em;
+  text-align: left;
+  text-decoration: none;
+  margin-top: 1em;
+  padding: 1em;
 }
 #booking {
   color: white;
