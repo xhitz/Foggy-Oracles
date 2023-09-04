@@ -26,39 +26,11 @@ body {
   top: 0;
   left: 0;
   z-index: 0;
-  background-color: rgb(26, 0, 48);
+  background-color: #141414;
 }
-#nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4.5em;
-  overflow: scroll;
-  padding: 1 5 9 11;
-  margin: 5px 0px 0px 0px;
-  background: rgb(118, 28, 182);
-  display: grid;
-  grid-template-columns: 1fr 3fr 3fr 1em;
-  grid-gap: 1em;
-  z-index: 1000;
-}
-#logo {
-  margin: 0.25em 0 0 2em;
-  height: 4em;
-  width: 6em;
-  background: rgb(118, 28, 182);
-  border-radius: 9px;
-}
-#logoimg {
-  height: 4em;
-  border-radius: 9px;
-}
-.bar {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 1em;
-  justify-items: end;
+#p0x {
+  width: 80%;
+  margin-left: 10%;
 }
 .stage {
   position: absolute;
@@ -72,54 +44,25 @@ body {
   background: none;
   scroll-behavior: smooth;
 }
-.link {
-  padding: 0.5em;
-  background: rgb(118, 28, 182);
-  border-radius: 9px;
-  height: 2em;
-  margin: 0.25em 0 0 0;
-  font-weight: 900;
-  color: lightgrey;
-}
+
 #move {
-  height: 500%;
+  height: auto;
   width: 100%;
   scroll-behavior: smooth;
-  pointer-events: none;
 }
-#starter {
-  position: relative;
-  top: 0;
-  width: 100%;
-  height: 5em;
-}
-.title {
-  position: relative;
-  top: 0em;
-  grid-column: 1/-1;
-  width: 100%;
-  height: 2em;
-  padding: 0.4em 0 0 30%;
-  color: white;
-  background: black;
-}
+
 .show {
   position: relative;
   top: 0em;
   grid-column: 1/-1;
   width: 100%;
-  height: calc(20% - 1.08em);
-  padding: 2em;
+  height: auto;
   color: white;
   overflow: hidden;
   scroll-behavior: smooth;
+  text-align: center;
 }
-#dev-inf {
-  position: absolute;
-  width: 20%;
-  z-index: 1001;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0);
-  display: none;
+.showimg {
+  max-width: 100%;
+  height: auto;
 }
