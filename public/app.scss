@@ -44,10 +44,10 @@ body {
 }
 
 #move {
-  height: auto;
+  height: 600%;
   width: 100%;
   scroll-behavior: smooth;
-  pointer-events: none;
+  overflow: hidden;
 }
 
 .show {
@@ -55,15 +55,54 @@ body {
   top: 0em;
   grid-column: 1/-1;
   width: 100%;
-  height: auto;
+  min-height: 16.7%;
   color: white;
   overflow: hidden;
   scroll-behavior: smooth;
   text-align: center;
 }
 .showimg {
-  max-width: 100%;
+  min-width: 100%;
   height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.aboveimg {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  max-height: 100%;
+  display: grid;
+  grid-template-rows: 10em 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  padding: 2em;
+}
+.tabimg {
+  width: 80%;
+  height: auto;
+}
+.tabimg:hover {
+  width: 85%;
+  height: auto;
+}
+#diasTab {
+  grid-column: 1;
+  grid-row: 2;
+  overflow: hidden;
+}
+#dojoTab {
+  grid-column: 2;
+  grid-row: 2;
+  overflow: hidden;
+  padding-top: 30px;
+}
+#vanByteTab {
+  grid-column: 3;
+  grid-row: 2;
+  overflow: hidden;
 }
 #booking {
   color: white;
