@@ -80,6 +80,7 @@ body {
   grid-row: 2/-1;
   grid-column: 3;
   font-size: 3em;
+  text-align: left;
 }
 #stereoimg {
   width: 80%;
@@ -99,6 +100,15 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1em;
   padding: 2em;
+}
+#ftwn {
+  transform: rotate(4.2deg);
+  margin: 2em;
+}
+#lessmore {
+  font-size: 1.8em;
+  text-align: left;
+  color: black;
 }
 .tabimg,
 .tab,
@@ -290,4 +300,31 @@ hr {
 }
 #booking {
   color: white;
+}
+#btndown {
+  position: absolute;
+  bottom: 2em;
+  left: 2em;
+  height: 3em;
+  width: 3em;
+  overflow: hidden;
+  display: block;
+}
+#btnup {
+  position: absolute;
+  bottom: 7em;
+  left: 2em;
+  height: 3em;
+  width: 3em;
+  overflow: hidden;
+  display: none;
+}
+#btnimg {
+  height: 100%;
+  width: 100%;
+}
+#btnupimg {
+  height: 100%;
+  width: 100%;
+  transform: rotate(180deg);
 }
