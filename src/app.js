@@ -7,6 +7,8 @@ const frontend = document.getElementById("frontend");
 const interactive = document.getElementById("interactive");
 const bubble = document.getElementById("speech");
 const bub = document.getElementById("bubble");
+const headimg = document.getElementById("headimg");
+const abovehead = document.getElementById("abovehead");
 const goBubble = (e) => {
   // console.log(e.target.id);
   switch (e.target.id) {
@@ -35,6 +37,15 @@ const goBubble = (e) => {
 const burst = (e) => {
   bubble.style.display = "none";
 };
+const paralax = (e) => {
+  console.log(window.event.clientX, window.innerWidth);
+  let perc = (100 / window.innerWidth) * window.event.clientX * 1.5 - window.innerWidth / 10;
+  let percY = (100 / window.innerHeight) * window.event.clientY * 0.5 + window.innerWidth / 10;
+  let perc2 = ((100 / window.innerWidth) * window.event.clientX) / 2 + window.innerWidth / 10;
+  headimg.style.left = perc + "px";
+  headimg.style.top = -percY + "px";
+  abovehead.style.left = perc2 + "px";
+};
 serverside.addEventListener("mouseover", goBubble);
 blockchain.addEventListener("mouseover", goBubble);
 backend.addEventListener("mouseover", goBubble);
@@ -45,3 +56,4 @@ blockchain.addEventListener("mouseleave", burst);
 backend.addEventListener("mouseleave", burst);
 frontend.addEventListener("mouseleave", burst);
 interactive.addEventListener("mouseleave", burst);
+document.addEventListener("mousemove", paralax);

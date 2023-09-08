@@ -69,10 +69,29 @@ body {
   top: 0;
   left: 0;
 }
+.headimg {
+  min-width: 120%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: -10%;
+}
+#stereotxt {
+  grid-row: 2/-1;
+  grid-column: 3;
+  font-size: 3em;
+}
+#stereoimg {
+  width: 80%;
+  height: auto;
+  grid-row: 2/-1;
+  grid-column: 1/3;
+}
 .aboveimg {
   position: absolute;
   top: 0;
   left: 10%;
+  right: 10%;
   width: 80%;
   height: 100%;
   display: grid;
