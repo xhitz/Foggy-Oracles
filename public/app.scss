@@ -102,13 +102,16 @@ body {
   padding: 2em;
 }
 #ftwn {
+  padding: 2em;
+}
+#_420 {
   transform: rotate(4.2deg);
-  margin: 2em;
 }
 #lessmore {
-  font-size: 1.8em;
+  font-size: 2.3em;
   text-align: left;
   color: black;
+  opacity: 0.42;
 }
 .tabimg,
 .tab,
@@ -327,4 +330,34 @@ hr {
   height: 100%;
   width: 100%;
   transform: rotate(180deg);
+}
+#ud,
+#twt,
+#email {
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  background: black;
+  font-weight: 900;
+  display: inline-block;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-bottom: 1em;
+}
+#ud:hover,
+#twt:hover,
+#email:hover {
+  background: white;
+  color: black;
+}
+#contax {
+  grid-row: 3;
+  grid-column: 2;
+  text-align: right;
+}
+button {
+  z-index: 2000;
+  color: white;
+  font-size: 2em;
+  background: black;
 }

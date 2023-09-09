@@ -1,4 +1,25 @@
 import "../public/app.scss";
+import UAuth from "@uauth/js";
+
+const uauth = new UAuth({
+  clientID: "uauth_example_spa_id",
+  redirectUri: "http://localhost:3030/callback",
+});
+
+const login = async () => {
+  try {
+    const authorization = await uauth.loginWithPopup();
+
+    console.log(authorization);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const logout = async () => {
+  await uauth.logout();
+  console.log("Logged out with Unstoppable");
+};
 
 const serverside = document.getElementById("serverside");
 const blockchain = document.getElementById("blockchain");
@@ -13,6 +34,9 @@ const move = document.getElementById("move");
 const home = document.getElementById("home");
 const up = document.getElementById("btnup");
 const down = document.getElementById("btndown");
+const loin = document.getElementById("login");
+const lout = document.getElementById("lout");
+
 const goBubble = (e) => {
   // console.log(e.target.id);
   switch (e.target.id) {
@@ -38,11 +62,9 @@ const goBubble = (e) => {
       break;
   }
 };
-
 const burst = (e) => {
   bubble.style.display = "none";
 };
-
 const paralax = (e) => {
   // console.log(window.event.clientX, window.innerWidth);
   let perc = (100 / window.innerWidth) * window.event.clientX * 1.5 - window.innerWidth / 10;
@@ -52,7 +74,6 @@ const paralax = (e) => {
   headimg.style.top = -percY + "px";
   abovehead.style.left = perc2 + "px";
 };
-
 const goUp = (e) => {
   up.href = "#home";
   up.style.display = "none";
@@ -99,3 +120,5 @@ interactive.addEventListener("mouseleave", burst);
 document.addEventListener("mousemove", paralax);
 up.addEventListener("click", goUp);
 down.addEventListener("click", goDown);
+loin.addEventListener("click", login);
+lout.addEventListener("click", logout);
