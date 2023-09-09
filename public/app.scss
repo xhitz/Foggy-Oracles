@@ -333,6 +333,7 @@ hr {
 }
 #ud,
 #twt,
+#twt1,
 #email {
   text-decoration: none;
   color: white;
@@ -346,13 +347,14 @@ hr {
 }
 #ud:hover,
 #twt:hover,
+#twt1:hover,
 #email:hover {
   background: white;
   color: black;
 }
 #contax {
-  grid-row: 3;
-  grid-column: 2;
+  grid-row: 2/3;
+  grid-column: 3;
   text-align: right;
 }
 button {
@@ -360,4 +362,12 @@ button {
   color: white;
   font-size: 2em;
   background: black;
+}
+#orbiter {
+  grid-row: 2/-1;
+  grid-column: 1/3;
+}
+#toasted {
+  width: 80%;
+  border-radius: 50%;
 }
