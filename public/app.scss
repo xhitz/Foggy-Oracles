@@ -108,7 +108,7 @@ body {
   transform: rotate(4.2deg);
 }
 #lessmore {
-  font-size: 2.3em;
+  font-size: 1.5em;
   text-align: left;
   color: black;
   opacity: 0.42;
@@ -370,4 +370,20 @@ button {
 #toasted {
   width: 80%;
   border-radius: 50%;
+}
+@media only screen and (max-width: 1290px) {
+  #title {
+    font-size: 3em;
+  }
+  .topic {
+    font-size: 2em;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  #title {
+    font-size: 2em;
+  }
+  .topic {
+    font-size: 1em;
+  }
 }

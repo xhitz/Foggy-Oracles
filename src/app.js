@@ -1,25 +1,4 @@
 import "../public/app.scss";
-import UAuth from "@uauth/js";
-
-const uauth = new UAuth({
-  clientID: "uauth_example_spa_id",
-  redirectUri: "http://localhost:3030/callback",
-});
-
-const login = async () => {
-  try {
-    const authorization = await uauth.loginWithPopup();
-
-    console.log(authorization);
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-const logout = async () => {
-  await uauth.logout();
-  console.log("Logged out with Unstoppable");
-};
 
 const serverside = document.getElementById("serverside");
 const blockchain = document.getElementById("blockchain");

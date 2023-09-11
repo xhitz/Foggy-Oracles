@@ -39,6 +39,7 @@
     "@openzeppelin/test-helpers": "^0.5.15",
     "@truffle/hdwallet-provider": "^2.1.15",
     "@uauth/js": "^2.8.0",
+    "@xmtp/xmtp-js": "^10.2.1",
     "bignumber": "^1.1.0",
     "copy-webpack-plugin": "^11.0.0",
     "dotenv": "^8.6.0",
