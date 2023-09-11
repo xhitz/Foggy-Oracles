@@ -334,6 +334,7 @@ hr {
 #ud,
 #twt2,
 #twt1,
+#twt3,
 #email {
   text-decoration: none;
   color: white;
@@ -348,6 +349,7 @@ hr {
 #ud:hover,
 #twt2:hover,
 #twt1:hover,
+#twt3:hover,
 #email:hover {
   background: white;
   color: black;
@@ -379,11 +381,102 @@ button {
     font-size: 2em;
   }
 }
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1023px) {
   #title {
-    font-size: 2em;
+    font-size: 1em;
+    height: 40px;
   }
   .topic {
     font-size: 1em;
+  }
+  .aboveimg {
+    position: absolute;
+    top: 0;
+    left: 2%;
+    right: 2%;
+    width: 96%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 2em 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+    padding: 2em;
+  }
+  #title,
+  #contax,
+  #orbiter,
+  #info,
+  #list,
+  #vanByteTab,
+  #dojoTab,
+  #diasTab,
+  #stereoimg,
+  #stereotxt,
+  .box {
+    font-size: 1.2em;
+    grid-column: 1/-1;
+  }
+  .tabTxt {
+    font-size: 2em;
+    grid-column: 1/-1;
+    grid-row: 2;
+  }
+  .tabTitle {
+    font-size: 2em;
+    margin-top: 2em;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  #stereoimg {
+    grid-row: 3;
+  }
+  #ftwn,
+  #_420 {
+    width: 80%;
+    padding: 0;
+  }
+  #portrait {
+    left: -23%;
+    height: 350px;
+  }
+  .headimg,
+  .showimg {
+    height: 120%;
+    width: auto;
+    top: 0;
+    left: -30%;
+  }
+  #btnup,
+  #btndown,
+  #list {
+    display: none;
+  }
+  #contax {
+    font-size: 0.8em;
+    margin-bottom: 0em;
+    grid-row: 3;
+  }
+  .tab,
+  .card {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 100px 1fr;
+    font-size: 0.4em;
+  }
+  .tabImg {
+    width: 100px;
+    height: auto;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #diasTab {
+    grid-row: 2;
+  }
+  #dojoTab {
+    grid-row: 3;
+  }
+  #vanByteTab {
+    grid-row: 4;
   }
 }

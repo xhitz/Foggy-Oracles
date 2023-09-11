@@ -13,8 +13,6 @@ const move = document.getElementById("move");
 const home = document.getElementById("home");
 const up = document.getElementById("btnup");
 const down = document.getElementById("btndown");
-const loin = document.getElementById("login");
-const lout = document.getElementById("lout");
 
 const goBubble = (e) => {
   // console.log(e.target.id);
@@ -99,5 +97,3 @@ interactive.addEventListener("mouseleave", burst);
 document.addEventListener("mousemove", paralax);
 up.addEventListener("click", goUp);
 down.addEventListener("click", goDown);
-loin.addEventListener("click", login);
-lout.addEventListener("click", logout);
