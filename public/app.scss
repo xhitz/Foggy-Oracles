@@ -38,7 +38,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  overflow-y: scroll;
+  overflow-y: hidden;
   background: none;
   scroll-behavior: smooth;
   text-align: center;
@@ -83,10 +83,18 @@ body {
   text-align: left;
 }
 #stereoimg {
+  margin-left: 4%;
+  margin-top: 4%;
   width: 80%;
   height: auto;
   grid-row: 2/-1;
   grid-column: 1/3;
+}
+#stereoimg:hover {
+  margin-left: 2%;
+  margin-top: 4%;
+  width: 82%;
+  height: auto;
 }
 .aboveimg {
   position: absolute;
@@ -445,7 +453,12 @@ button {
     height: 120%;
     width: auto;
     top: 0;
-    left: -30%;
+    left: 0 !important;
+    top: -10% !important;
+  }
+  .aboveimg {
+    left: 2% !important;
+    width: 96%;
   }
   #btnup,
   #btndown,
@@ -478,5 +491,18 @@ button {
   }
   #vanByteTab {
     grid-row: 4;
+  }
+  .stage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    background: none;
+    scroll-behavior: smooth;
+    text-align: center;
   }
 }
