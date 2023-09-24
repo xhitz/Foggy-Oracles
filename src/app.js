@@ -7,6 +7,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Flip from "gsap/Flip";
 import Draggable from "gsap/Draggable";
+import { setDimensions, getDimensions } from "./dias";
+setDimensions();
 gsap.registerPlugin(ScrollTrigger, Draggable, Flip);
 /*
 const sdk = require("api")("@fortress/v1.0#keedbllp9wkys");

@@ -462,3 +462,36 @@ option {
   text-align: center;
   border: 0px;
 }
+
+#diascanvas {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  left: calc(50% - 300px);
+  top: calc(50% - 300px);
+  overflow: hidden;
+}
+#projectdimensions {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  background: repeat center/50px url("https://ipfs.io/ipfs/QmXFoNX9GE1usP7Mnot7VyCdHG1H5ArjTmEWD5NBsggjSz");
+  left: calc(50% - 300px);
+  top: calc(50% - 200px);
+  overflow: hidden;
+}
+#layertemp {
+  position: relative;
+  width: 120%;
+  height: 120%;
+  left: -10%;
+  top: -10%;
+  background: none;
+}
+#svgbox,
+#imgtemp,
+#imgtemp,
+#vidtemp,
+#audtemp {
+  display: none;
+}
