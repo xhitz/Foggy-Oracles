@@ -7,6 +7,7 @@ const IAO = {
   name: "tCO2",
   description: "Non Fungible Carbon Offset Asset",
   image: "https://ipfs.io/ipfs/QmeJXeLpYMu2eXybqe4RAkSKBiw6FMnVLnCScjUptHSczP",
+  diasbase: "https://ipfs.io/ipfs/",
   attributes: [
     {
       trait_type: "tCO2",
@@ -123,7 +124,7 @@ const IAO = {
       id: 0,
       content: {
         type: "image", // options(symbol, font, image, audio, video)
-        path: "backgrounds/", // path to type content data
+        path: diasbase + "backgrounds/", // path to type content data
         color: false, // for symbol & font only :: in hex format #abcdef
         border: false, // for symbol only :: in hex format #abcdef
         autoplay: false, // for audio and video only
@@ -136,9 +137,74 @@ const IAO = {
       },
       keys: [{ id: 0, x: 0, y: 0, sx: 1, sy: 1, r: 0, o: 1 }, { id: 1 }, { id: 2 }, { id: 3 }],
     },
-    { id: 1 },
-    { id: 2 },
-    { id: 3 },
+    {
+      id: 1,
+      content: {
+        type: "image", // options(symbol, font, image, audio, video)
+        path: diasbase + "animals/", // path to type content data
+        color: false, // for symbol & font only :: in hex format #abcdef
+        border: false, // for symbol only :: in hex format #abcdef
+        autoplay: false, // for audio and video only
+      },
+      feed: {
+        type: "user", // options(oracle, external, internal, user)
+        name: "mouseParalax", //
+        address: false,
+        init: 0,
+      },
+      keys: [{ id: 0, x: 0, y: 0, sx: 1, sy: 1, r: 0, o: 1 }, { id: 1 }, { id: 2 }, { id: 3 }],
+    },
+    {
+      id: 2,
+      content: {
+        type: "image", // options(symbol, font, image, audio, video)
+        path: diasbase + "covers/", // path to type content data
+        color: false, // for symbol & font only :: in hex format #abcdef
+        border: false, // for symbol only :: in hex format #abcdef
+        autoplay: false, // for audio and video only
+      },
+      feed: {
+        type: "user", // options(oracle, external, internal, user)
+        name: "mouseParalax", //
+        address: false,
+        init: 0,
+      },
+      keys: [{ id: 0, x: 0, y: 0, sx: 1, sy: 1, r: 0, o: 1 }, { id: 1 }, { id: 2 }, { id: 3 }],
+    },
+    {
+      id: 3,
+      content: {
+        type: "image", // options(symbol, font, image, audio, video)
+        path: diasbase + "names/", // path to type content data
+        color: false, // for symbol & font only :: in hex format #abcdef
+        border: false, // for symbol only :: in hex format #abcdef
+        autoplay: false, // for audio and video only
+      },
+      feed: {
+        type: "user", // options(oracle, external, internal, user)
+        name: "mouseParalax", //
+        address: false,
+        init: 0,
+      },
+      keys: [{ id: 0, x: 0, y: 0, sx: 1, sy: 1, r: 0, o: 1 }, { id: 1 }, { id: 2 }, { id: 3 }],
+    },
+    {
+      id: 4,
+      content: {
+        type: "image", // options(symbol, font, image, audio, video)
+        path: diasbase + "maps/", // path to type content data
+        color: false, // for symbol & font only :: in hex format #abcdef
+        border: false, // for symbol only :: in hex format #abcdef
+        autoplay: false, // for audio and video only
+      },
+      feed: {
+        type: "user", // options(oracle, external, internal, user)
+        name: "mouseParalax", //
+        address: false,
+        init: 0,
+      },
+      keys: [{ id: 0, x: 0, y: 0, sx: 1, sy: 1, r: 0, o: 1 }, { id: 1 }, { id: 2 }, { id: 3 }],
+    },
   ],
 };
 export const calcDimensions = (width, height) => {
