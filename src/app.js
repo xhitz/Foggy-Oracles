@@ -4,19 +4,9 @@ import UAuth from "@uauth/js";
 import { Client } from "@xmtp/xmtp-js";
 
 let wallet_address;
-const loadUD = async () => {
-  // Load all messages in the conversation
-  const messages = await conversation.messages();
-  // Send a message
-  await conversation.send("gm");
-  // Listen for new messages in the conversation
-  for await (const message of await conversation.streamMessages()) {
-    console.log(`[${message.senderAddress}]: ${message.content}`);
-  }
-};
 
 const uauth = new UAuth({
-  clientID: "03412090-fe20-4d05-94aa-36f316b2ffac",
+  clientID: "7156f6a9-9afe-49e0-a0cc-2edaf1a5aa3b",
   redirectUri: "http://localhost:3000",
   scope: "openid wallet messaging:notifications:optional",
 });
