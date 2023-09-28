@@ -1,4 +1,6 @@
+const webpack = require("webpack");
 const path = require("path");
+
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { LoaderOptionsPlugin } = require("webpack");
@@ -27,10 +29,19 @@ module.exports = {
       reconnect: true,
     },
     allowedHosts: ["127.0.0.1"],
-    port: 3030,
+    port: 3000,
     open: true,
     hot: true,
     liveReload: true,
   },
-  plugins: [new HtmlWebpackPlugin({ title: "@stereoIII6.x", file: "index.html", template: "public/app.html" }), new CopyWebpackPlugin({ patterns: [{ from: "public/images", to: "images" }] }), new CopyWebpackPlugin({ patterns: [{ from: "public/json", to: "json" }] })],
+
+  plugins: [
+    new webpack.LoaderOptionsPlugin({
+      Buffer: ["buffer", "Buffer"],
+      options: { transpileDependencies: true },
+    }),
+    new HtmlWebpackPlugin({ title: "@stereoIII6.x", file: "index.html", template: "public/app.html" }),
+    new CopyWebpackPlugin({ patterns: [{ from: "public/images", to: "images" }] }),
+    new CopyWebpackPlugin({ patterns: [{ from: "public/json", to: "json" }] }),
+  ],
 };

@@ -1,4 +1,25 @@
+import "../polyfills";
 import "../public/app.scss";
+import UAuth from "@uauth/js";
+import { Client } from "@xmtp/xmtp-js";
+
+let wallet_address;
+const loadUD = async () => {
+  // Load all messages in the conversation
+  const messages = await conversation.messages();
+  // Send a message
+  await conversation.send("gm");
+  // Listen for new messages in the conversation
+  for await (const message of await conversation.streamMessages()) {
+    console.log(`[${message.senderAddress}]: ${message.content}`);
+  }
+};
+
+const uauth = new UAuth({
+  clientID: "03412090-fe20-4d05-94aa-36f316b2ffac",
+  redirectUri: "http://localhost:3000",
+  scope: "openid wallet messaging:notifications:optional",
+});
 
 const serverside = document.getElementById("serverside");
 const blockchain = document.getElementById("blockchain");
@@ -13,6 +34,64 @@ const move = document.getElementById("move");
 const home = document.getElementById("home");
 const up = document.getElementById("btnup");
 const down = document.getElementById("btndown");
+const login = document.getElementById("login");
+const logout = document.getElementById("logout");
+const udchat = document.getElementById("udchat");
+let UDT = false;
+
+window.login = async () => {
+  try {
+    const authorization = await uauth.loginWithPopup();
+
+    console.log(authorization.idToken.sub, authorization.idToken.wallet_address, authorization.idToken);
+    login.innerHTML = '<img src="./images/udlogo.png" id="udlogo" />' + authorization.idToken.sub;
+    login.removeEventListener("click", window.login);
+    login.addEventListener("click", toggleUD);
+    let signer = authorization.idToken.wallet_address;
+
+    let keys = loadKeys(wallet_address);
+    if (!keys) {
+      keys = await Client.getKeys(signer, {
+        ...clientOptions,
+        // we don't need to publish the contact here since it
+        // will happen when we create the client later
+        skipContactPublishing: true,
+        // we can skip persistence on the keystore for this short-lived
+        // instance
+        persistConversations: false,
+      });
+      storeKeys(wallet_address, keys);
+    }
+    const xmtp = await Client.create(wallet_address, { env: "dev" });
+    // Start a conversation with XMTP
+    const conversation = await xmtp.conversations.newConversation(signer);
+  } catch (error) {
+    console.error(error);
+  }
+};
+window.logout = async () => {
+  await uauth.logout();
+  console.log("Logged out with Unstoppable");
+  toggleUD();
+  login.innerHTML = '<img src="./images/udlogo.png" id="udlogo" /> Login';
+  login.removeEventListener("click", toggleUD);
+  login.addEventListener("click", window.login);
+};
+
+const toggleUD = (e) => {
+  UDT = !UDT;
+  if (UDT === true) {
+    logout.style.display = "block";
+    udchat.style.display = "block";
+  } else {
+    logout.style.display = "none";
+    udchat.style.display = "none";
+  }
+};
+
+login.addEventListener("click", window.login);
+logout.addEventListener("click", window.logout);
+udchat.addEventListener("click", loadUD);
 
 const goBubble = (e) => {
   // console.log(e.target.id);
