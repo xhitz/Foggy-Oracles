@@ -412,26 +412,62 @@ button {
 #chat {
   position: relative;
   width: 80%;
+  height: 80%;
+  top: 5%;
   left: 5%;
   padding: 5%;
-  height: 600px;
-  overflow: scroll;
-}
-#convolist {
   display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 500px 1fr;
+  grid-gap: 1em;
+  display: none;
+}
+#msgscreen {
+  grid-row: 1;
+  grid-column: 1;
+  background: rgba(pink, 0.3);
+  overflow-y: scroll;
+}
+#convoscreen {
+  grid-row: 1;
+  grid-column: 2;
+  background: rgba(lightgreen, 0.3);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1em 500px;
+  grid-gap: 0.1em;
+}
+#chatbox {
+  grid-row: 2;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 6fr 32px 32px 32px 32px;
   grid-gap: 1em;
 }
-.convolistitem {
+.listitem {
   display: grid;
-  grid-template-rows: 3em 1em 1fr 3em;
+  grid-template-rows: 3em 1em 1fr;
+  grid-gap: 0.5em;
   background: white;
   border-radius: 9px;
-  font-size: 0.8em;
+  font-size: 1em;
   padding: 1em;
+  height: min-content;
+  position: relative;
+  top: 1em;
+  width: calc(100% - 2em);
+  left: 1em;
+  margin-top: 1em;
 }
-#convostitle {
-  color: white;
-  display: none;
+
+.cbbtns {
+  color: brown;
+  background: rgba(white, 0.5);
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  text-align: center;
+  padding-top: 0.3em;
 }
 @media only screen and (max-width: 1290px) {
   #title {
