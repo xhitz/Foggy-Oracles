@@ -409,6 +409,30 @@ button {
 #udchat {
   display: none;
 }
+#chat {
+  position: relative;
+  width: 80%;
+  left: 5%;
+  padding: 5%;
+  height: 600px;
+  overflow: scroll;
+}
+#convolist {
+  display: grid;
+  grid-gap: 1em;
+}
+.convolistitem {
+  display: grid;
+  grid-template-rows: 3em 1em 1fr 3em;
+  background: white;
+  border-radius: 9px;
+  font-size: 0.8em;
+  padding: 1em;
+}
+#convostitle {
+  color: white;
+  display: none;
+}
 @media only screen and (max-width: 1290px) {
   #title {
     font-size: 3em;
