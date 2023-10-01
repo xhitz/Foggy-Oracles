@@ -129,6 +129,7 @@ const msgs = async (convo) => {
 };
 const loadConvos = async () => {
   let chmsg = [];
+  list.innerHTML = "";
   chat.style.display = "grid";
   const allConversations = await inbx.conversations.list();
   let l = allConversations.length;
@@ -137,11 +138,11 @@ const loadConvos = async () => {
     const messages = await allConversations[i].messages();
     chmsg = chmsg.concat(messages);
   }
-  chmsg.sort((a, b) => (a.sent > b.sent ? 1 : -1));
+  chmsg.sort((a, b) => (a.sent > b.sent ? -1 : 1));
   // console.log(chmsg, chmsg.length);
   chmsg.map((msg) => {
     console.log(msg);
-    list.innerHTML += `<div id='${msg.id}' class="listitem"><h3>${msg.senderAddress}</h3><i>${msg.sent}</i><p>${msg.content}</p></div>`;
+    list.innerHTML += `<div id='${msg.id}' class="listitem"><h3>${msg.senderAddress}</h3><i>${msg.sent}</i><h5>${msg.content}</h5></div>`;
   });
 };
 const newConvoWith = async (adr) => {
@@ -165,6 +166,7 @@ const sendChatMsg = async (msg) => {
 const chatSend = () => {
   console.log(msgin.value);
   sendChatMsg(msgin.value);
+  msgin.value = "";
 };
 send.addEventListener("click", chatSend);
 const sendMsgTo = async (adr, msg) => {
