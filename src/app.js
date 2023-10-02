@@ -5,7 +5,7 @@ import UAuth from "@uauth/js";
 import { Client } from "@xmtp/xmtp-js";
 import { ethers } from "ethers";
 import Resolution from "@unstoppabledomains/resolution";
-const res = "_vrdmtqr44wuho935cv9hg7nuergvnfrv3brwvvkpzonlkzs";
+
 // !! public private key of s0x messaging inbox !!
 // !! wallet is empty do not send funds to this wallet !!
 // !! 0x0000015FF422de199B42dF29C29009Ea651F2CcE !!
