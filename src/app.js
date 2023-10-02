@@ -6,6 +6,7 @@ import { Client } from "@xmtp/xmtp-js";
 import { ethers } from "ethers";
 import Resolution from "@unstoppabledomains/resolution";
 const res = "_vrdmtqr44wuho935cv9hg7nuergvnfrv3brwvvkpzonlkzs";
+
 // !! public private key of s0x messaging inbox !!
 // !! wallet is empty do not send funds to this wallet !!
 // !! 0x0000015FF422de199B42dF29C29009Ea651F2CcE !!
@@ -58,7 +59,8 @@ const log = async () => {
   await provider.send("eth_accounts", []);
   ipro = new ethers.providers.Web3Provider(ethereum);
   await ipro.send("eth_accounts", []);
-  inbox = new ethers.Wallet("d272af7e40ecbcb9583cdd739df6303b15347d289ceb15b02fc16830790f0a96", ipro);
+  let mnemonic = "scan region mail basket sentence planet brown tooth state sense economy raise";
+  inbox = ethers.Wallet.fromMnemonic(mnemonic);
   inbx = await Client.create(inbox, { env: "production" });
   signer = await provider.getSigner();
   xmtp = await Client.create(signer, { env: "production" });
