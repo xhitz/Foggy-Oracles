@@ -19,7 +19,7 @@ const clientOptions = {
 
 const uauth = new UAuth({
   clientID: "7156f6a9-9afe-49e0-a0cc-2edaf1a5aa3b",
-  redirectUri: "https://stereo.iii6.xyz/",
+  redirectUri: "http://localhost:3000",
   scope: "openid wallet messaging:notifications:optional",
 });
 
