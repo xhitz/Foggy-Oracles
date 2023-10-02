@@ -1,4 +1,3 @@
-const webpack = require("webpack");
 const path = require("path");
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -19,6 +18,7 @@ module.exports = {
     rules: [
       { test: /\.s[ac]ss$/i, use: ["style-loader", "css-loader", "sass-loader"] },
       { test: /\.(svg|png|ico|wepg|jpg|jpeg|gifglb|gltf)$/, use: ["asset/resource"] },
+      { test: /\.ts$/, use: ["babel-loader", "ts-loader"] },
     ],
   },
   devtool: "inline-source-map",
@@ -36,7 +36,7 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.LoaderOptionsPlugin({
+    new LoaderOptionsPlugin({
       Buffer: ["buffer", "Buffer"],
       options: { transpileDependencies: true },
     }),
