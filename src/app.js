@@ -9,7 +9,6 @@ const res = "_vrdmtqr44wuho935cv9hg7nuergvnfrv3brwvvkpzonlkzs";
 // !! public private key of s0x messaging inbox !!
 // !! wallet is empty do not send funds to this wallet !!
 // !! 0x0000015FF422de199B42dF29C29009Ea651F2CcE !!
-const pKey = "d272af7e40ecbcb9583cdd739df6303b15347d289ceb15b02fc16830790f0a96";
 // !! auto redirect script on every evm chain to prevent fraud active 247 !!
 const resolution = new Resolution({ apiKey: res });
 
@@ -51,17 +50,18 @@ let UDT = false;
 let signer;
 let inbox;
 let provider;
+let ipro;
 let xmtp;
 let inbx;
-
 const log = async () => {
   provider = new ethers.providers.Web3Provider(ethereum);
   await provider.send("eth_accounts", []);
-
-  signer = await provider.getSigner();
-  inbox = new ethers.Wallet(pKey, provider);
-  xmtp = await Client.create(signer, { env: "production" });
+  ipro = new ethers.providers.Web3Provider(ethereum);
+  await ipro.send("eth_accounts", []);
+  inbox = new ethers.Wallet("d272af7e40ecbcb9583cdd739df6303b15347d289ceb15b02fc16830790f0a96", ipro);
   inbx = await Client.create(inbox, { env: "production" });
+  signer = await provider.getSigner();
+  xmtp = await Client.create(signer, { env: "production" });
 };
 window.login = async () => {
   try {
@@ -146,8 +146,10 @@ const loadConvos = async () => {
   let chmsg = [];
   list.innerHTML = "";
   chat.style.display = "grid";
+
   const allConversations = await inbx.conversations.list();
   let l = allConversations.length;
+
   console.log(l);
   for (let i = 0; i < l; i++) {
     const messages = await allConversations[i].messages();
@@ -165,8 +167,15 @@ const newConvoWith = async (adr) => {
   console.log("convo: ", conversation);
   // Load all messages in the conversation
 };
+const newChat = async () => {
+  ipro = new ethers.providers.Web3Provider(ethereum);
+  await ipro.send("eth_accounts", []);
+  inbox = ethers.Wallet("d272af7e40ecbcb9583cdd739df6303b15347d289ceb15b02fc16830790f0a96", ipro);
+  inbx = await Client.create(inbox, { env: "production" });
+};
 const sendChatMsg = async (msg) => {
-  const chatroom = "0x0000015FF422de199B42dF29C29009Ea651F2CcE";
+  const chatroom = inbox.address;
+  console.log(chatroom);
   // Start a conversation with XMTP
   const conversation = await xmtp.conversations.newConversation(chatroom);
   // Send a message

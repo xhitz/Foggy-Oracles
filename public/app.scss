@@ -409,14 +409,6 @@ button {
 #udchat {
   display: none;
 }
-@media only screen and (max-width: 1290px) {
-  #title {
-    font-size: 3em;
-  }
-  .topic {
-    font-size: 2em;
-  }
-}
 #chat {
   position: relative;
   width: 90%;
@@ -439,12 +431,13 @@ button {
 }
 #convoscreen {
   grid-row: 1;
-  grid-column: 1/-1;
+  grid-column: 2;
   background: rgba(lightgreen, 0.3);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1em 500px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 0.1em;
+  display: none;
 }
 #chatbox {
   grid-row: 2;
