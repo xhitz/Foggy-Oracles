@@ -10,8 +10,13 @@ import Draggable from "gsap/Draggable";
 gsap.registerPlugin(ScrollTrigger, Draggable, Flip);
 /*
  */
-import { setDimensions } from "./dias";
+import { setDimensions, IAO } from "./dias";
 setDimensions();
+
+const loadToken = (id) => {
+  console.log(IAO.layers.length);
+  IAO.layers.map((layer) => {});
+};
 
 /*
 const sdk = require("api")("@fortress/v1.0#keedbllp9wkys");

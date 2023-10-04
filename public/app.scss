@@ -482,13 +482,14 @@ option {
   top: calc(50% - 200px);
   overflow: hidden;
 }
-#layertemp {
+.layertemp {
   position: relative;
   width: 120%;
   height: 120%;
   left: -10%;
   top: -10%;
   background: none;
+  display: none;
 }
 #svgbox,
 #imgtemp,

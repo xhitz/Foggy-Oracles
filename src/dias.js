@@ -3,7 +3,7 @@ const hIn = document.getElementById("heightIn");
 const wIn = document.getElementById("widthIn");
 const factor = document.getElementById("factor");
 const go = document.getElementById("giveDim");
-const IAO = {
+export const IAO = {
   name: "tCO2",
   description: "Non Fungible Carbon Offset Asset",
   image: "https://ipfs.io/ipfs/QmeJXeLpYMu2eXybqe4RAkSKBiw6FMnVLnCScjUptHSczP",

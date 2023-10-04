@@ -30,6 +30,8 @@ module.exports = {
       network_id: 80001,
       confirmations: 10,
       timeoutBlocks: 900,
+      gas: 3000000,
+      gasPrice: 47000000,
       skipDryRun: true,
     },
     fevm: {

@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
-contract cmx_nft is ERC721 {
+contract tCO2 is ERC721 {
     
     address private admin;
     mapping (address => bool) private isAdmin;
