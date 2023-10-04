@@ -19,8 +19,8 @@ const clientOptions = {
 
 const uauth = new UAuth({
   clientID: "7156f6a9-9afe-49e0-a0cc-2edaf1a5aa3b",
-  // redirectUri: "http://localhost:3000",
-  redirectUri: "https://stereo.iii6.xyz",
+  redirectUri: "http://localhost:3000",
+  // redirectUri: "https://stereo.iii6.xyz",
   scope: "openid wallet messaging:notifications:optional",
 });
 
@@ -179,7 +179,7 @@ const sendChatMsg = async (msg) => {
   const chatroom = inbox.address;
   console.log(chatroom);
   // Start a conversation with XMTP
-  const conversation = await xmtp.conversations.newConversation(chatroom);
+  const conversation = await inbx.conversations.newConversation(chatroom);
   // Send a message
   await conversation.send(msg);
   // Listen for new messages in the conversation
