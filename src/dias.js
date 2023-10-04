@@ -174,7 +174,7 @@ export const IAO = {
         border: false, // for symbol only :: in hex format #abcdef
         autoplay: false, // for audio and video only
         traits: 5 * 10,
-        digits: [10, 9],
+        digits: [13, 14],
       },
       feed: {
         type: "user", // options(oracle, external, internal, user)
@@ -195,7 +195,7 @@ export const IAO = {
         border: false, // for symbol only :: in hex format #abcdef
         autoplay: false, // for audio and video only
         traits: 5 * 10,
-        digits: [2, 1],
+        digits: [2, 12],
       },
       feed: {
         type: "user", // options(oracle, external, internal, user)
@@ -214,8 +214,28 @@ export const IAO = {
         color: false, // for symbol & font only :: in hex format #abcdef
         border: false, // for symbol only :: in hex format #abcdef
         autoplay: false, // for audio and video only
-        traits: 9,
-        digits: [3],
+        traits: 10,
+        digits: [15],
+      },
+      feed: {
+        type: "user", // options(oracle, external, internal, user)
+        name: "mouseParalax", //
+        address: false,
+        init: 0,
+      },
+      keys: [{ id: 0, x: 0, y: 0, sx: 1, sy: 1, r: 0, o: 1 }, { id: 1 }, { id: 2 }, { id: 3 }],
+    },
+    {
+      id: 5,
+      content: {
+        type: "image", // options(symbol, font, image, audio, video)
+        name: "logo",
+        path: "/images/dias/logo", // path to type content data
+        color: false, // for symbol & font only :: in hex format #abcdef
+        border: false, // for symbol only :: in hex format #abcdef
+        autoplay: false, // for audio and video only
+        traits: 1,
+        digits: [0],
       },
       feed: {
         type: "user", // options(oracle, external, internal, user)
@@ -263,3 +283,4 @@ export const setDimensions = (e) => {
   calcDimensions(Number(wIn.value), Number(hIn.value));
 };
 // go.addEventListener("click", setDimensions);
+// 1 281 696 459 690 731

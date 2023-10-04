@@ -51,14 +51,15 @@ const nullaya = document.getElementById("null");
 
 const loadToken = async (id) => {
   // console.log("Layers : " + IAO.layers.length);
-
+  pds.innerHTML = "";
   IAO.layers.map((layer) => {
     // console.log("Layer ID : " + layer.id + " / " + Number(id));
     // console.log("Layer Type : " + layer.content.type);
     // console.log("Layer Data Path : " + layer.content.path);
     // console.log("Layer Digits : " + layer.content.digits);
-    let path = layer.content.name == "aniname" ? layer.content.path + "/" + Math.floor(id[layer.content.digits[0]] / 2) + "/" + id[layer.content.digits[1]] : layer.content.name == "cover" ? layer.content.path + "/" + Math.floor(id[layer.content.digits[0]] / 2) + "/" + id[layer.content.digits[1]] : layer.content.name == "animal" ? layer.content.path + "/" + Math.floor(id[layer.content.digits[0]] / 2) : layer.content.path + "/" + id[layer.content.digits[0]];
+    let path = layer.content.name == "aniname" ? layer.content.path + "/" + Math.floor(id[layer.content.digits[0]] / 2) + "/" + id[layer.content.digits[1]] : layer.content.name == "cover" ? layer.content.path + "/" + Math.floor(id[layer.content.digits[0]] / 2) + "/" + id[layer.content.digits[1]] : layer.content.name == "animal" ? layer.content.path + "/" + Math.floor(id[layer.content.digits[0]] / 2) : layer.content.name == "logo" ? layer.content.path + "/logo" : layer.content.name == "map" ? layer.content.path + "/belize/" + id[layer.content.digits[0]] : layer.content.path + "/" + id[layer.content.digits[0]];
     console.log(path, layer.content.digits);
+
     pds.innerHTML += `<div id="l${layer.id}" class="layertemp">
     ${layer.content.type == "text" ? '<div id="txttemp" width=' + newWidth + " height=" + newHeight + '">"' + layer.content.path + '"</div>' : ""}
     ${layer.content.type == "image" ? '<img id="imgtemp" src="' + path + '.png" width=' + newWidth + " height=" + newHeight + ';"/>' : ""}
@@ -72,12 +73,12 @@ const loadToken = async (id) => {
 const makeRandom = () => {
   let p = Math.floor(Math.random() * 100);
   let t = Math.floor(Math.random() * 10);
-  let n = Math.floor(Math.random() * 10000000000);
-  if (n < 10000000000) n * 9;
+  let n = Date.now();
   console.log("ID :: " + String(p) + String(t) + String(n));
   loadToken(String(p) + String(t) + String(n));
 };
-setInterval(makeRandom, 5000);
+makeRandom();
+setInterval(makeRandom, 12345);
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
