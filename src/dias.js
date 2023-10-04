@@ -124,7 +124,7 @@ const IAO = {
       id: 0,
       content: {
         type: "image", // options(symbol, font, image, audio, video)
-        path: diasbase + "backgrounds/", // path to type content data
+        path: "/images/dias/bg", // path to type content data
         color: false, // for symbol & font only :: in hex format #abcdef
         border: false, // for symbol only :: in hex format #abcdef
         autoplay: false, // for audio and video only
@@ -141,7 +141,7 @@ const IAO = {
       id: 1,
       content: {
         type: "image", // options(symbol, font, image, audio, video)
-        path: diasbase + "animals/", // path to type content data
+        path: "/images/dias/animals/", // path to type content data
         color: false, // for symbol & font only :: in hex format #abcdef
         border: false, // for symbol only :: in hex format #abcdef
         autoplay: false, // for audio and video only
@@ -158,7 +158,7 @@ const IAO = {
       id: 2,
       content: {
         type: "image", // options(symbol, font, image, audio, video)
-        path: diasbase + "covers/", // path to type content data
+        path: "/images/dias/covers/", // path to type content data
         color: false, // for symbol & font only :: in hex format #abcdef
         border: false, // for symbol only :: in hex format #abcdef
         autoplay: false, // for audio and video only
@@ -175,7 +175,7 @@ const IAO = {
       id: 3,
       content: {
         type: "image", // options(symbol, font, image, audio, video)
-        path: diasbase + "names/", // path to type content data
+        path: "/images/dias/names/", // path to type content data
         color: false, // for symbol & font only :: in hex format #abcdef
         border: false, // for symbol only :: in hex format #abcdef
         autoplay: false, // for audio and video only
@@ -192,7 +192,7 @@ const IAO = {
       id: 4,
       content: {
         type: "image", // options(symbol, font, image, audio, video)
-        path: diasbase + "maps/", // path to type content data
+        path: "/images/dias/maps/", // path to type content data
         color: false, // for symbol & font only :: in hex format #abcdef
         border: false, // for symbol only :: in hex format #abcdef
         autoplay: false, // for audio and video only
@@ -208,6 +208,7 @@ const IAO = {
   ],
 };
 export const calcDimensions = (width, height) => {
+  console.log("test", width, height);
   let newWidth;
   let newHeight;
   let sizeFactor;
@@ -240,7 +241,7 @@ export const calcDimensions = (width, height) => {
   console.log("w" + newWidth, "h" + newHeight, "f" + sizeFactor);
 };
 export const setDimensions = (e) => {
-  console.log(wIn.value, hIn.value);
+  console.log("w", wIn.value, "h", hIn.value);
   calcDimensions(Number(wIn.value), Number(hIn.value));
 };
 // go.addEventListener("click", setDimensions);
