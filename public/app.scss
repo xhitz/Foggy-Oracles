@@ -470,7 +470,7 @@ option {
   height: 600px;
   grid-column: 1/3;
   grid-row: 1/-1;
-  overflow: hidden;
+  // overflow: hidden;
   justify-self: center;
 }
 #projectdimensions {
@@ -478,23 +478,23 @@ option {
   height: 400px;
   position: relative;
   background: repeat center/50px url("https://ipfs.io/ipfs/QmXFoNX9GE1usP7Mnot7VyCdHG1H5ArjTmEWD5NBsggjSz");
+  background: none;
   left: calc(50% - 300px);
   top: calc(50% - 200px);
-  overflow: hidden;
+  // overflow: hidden;
 }
 .layertemp {
-  position: relative;
-  width: 120%;
-  height: 120%;
-  left: -10%;
-  top: -10%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
   background: none;
-  display: none;
 }
-#svgbox,
-#imgtemp,
-#imgtemp,
+
+#svgtemp,
 #vidtemp,
-#audtemp {
+#audtemp,
+#txttemp {
   display: none;
 }

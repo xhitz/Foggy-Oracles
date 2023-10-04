@@ -3,6 +3,9 @@ const hIn = document.getElementById("heightIn");
 const wIn = document.getElementById("widthIn");
 const factor = document.getElementById("factor");
 const go = document.getElementById("giveDim");
+export let newWidth;
+export let newHeight;
+let sizeFactor;
 export const IAO = {
   name: "tCO2",
   description: "Non Fungible Carbon Offset Asset",
@@ -124,10 +127,13 @@ export const IAO = {
       id: 0,
       content: {
         type: "image", // options(symbol, font, image, audio, video)
-        path: "/images/dias/bg", // path to type content data
+        name: "bg",
+        path: "/images/dias/bg/floor", // path to type content data
         color: false, // for symbol & font only :: in hex format #abcdef
         border: false, // for symbol only :: in hex format #abcdef
         autoplay: false, // for audio and video only
+        traits: 10,
+        digits: [7],
       },
       feed: {
         type: "user", // options(oracle, external, internal, user)
@@ -141,10 +147,14 @@ export const IAO = {
       id: 1,
       content: {
         type: "image", // options(symbol, font, image, audio, video)
-        path: "/images/dias/animals/", // path to type content data
+        name: "animal",
+        group: "animals",
+        path: "/images/dias/animals", // path to type content data
         color: false, // for symbol & font only :: in hex format #abcdef
         border: false, // for symbol only :: in hex format #abcdef
         autoplay: false, // for audio and video only
+        traits: 5,
+        digits: [2],
       },
       feed: {
         type: "user", // options(oracle, external, internal, user)
@@ -158,10 +168,13 @@ export const IAO = {
       id: 2,
       content: {
         type: "image", // options(symbol, font, image, audio, video)
-        path: "/images/dias/covers/", // path to type content data
+        name: "cover",
+        path: "/images/dias/covers", // path to type content data
         color: false, // for symbol & font only :: in hex format #abcdef
         border: false, // for symbol only :: in hex format #abcdef
         autoplay: false, // for audio and video only
+        traits: 5 * 10,
+        digits: [10, 9],
       },
       feed: {
         type: "user", // options(oracle, external, internal, user)
@@ -175,10 +188,14 @@ export const IAO = {
       id: 3,
       content: {
         type: "image", // options(symbol, font, image, audio, video)
-        path: "/images/dias/names/", // path to type content data
+        name: "aniname",
+        path: "/images/dias/names", // path to type content data
+        group: "animals",
         color: false, // for symbol & font only :: in hex format #abcdef
         border: false, // for symbol only :: in hex format #abcdef
         autoplay: false, // for audio and video only
+        traits: 5 * 10,
+        digits: [2, 1],
       },
       feed: {
         type: "user", // options(oracle, external, internal, user)
@@ -192,10 +209,13 @@ export const IAO = {
       id: 4,
       content: {
         type: "image", // options(symbol, font, image, audio, video)
-        path: "/images/dias/maps/", // path to type content data
+        name: "map",
+        path: "/images/dias/maps", // path to type content data
         color: false, // for symbol & font only :: in hex format #abcdef
         border: false, // for symbol only :: in hex format #abcdef
         autoplay: false, // for audio and video only
+        traits: 9,
+        digits: [3],
       },
       feed: {
         type: "user", // options(oracle, external, internal, user)
@@ -209,9 +229,7 @@ export const IAO = {
 };
 export const calcDimensions = (width, height) => {
   console.log("test", width, height);
-  let newWidth;
-  let newHeight;
-  let sizeFactor;
+
   if (width === height) {
     // square mode
     console.log("square", width, height);

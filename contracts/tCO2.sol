@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.19;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
@@ -25,7 +25,7 @@ contract tCO2 is ERC721 {
         string name;
         bytes desc;
     }
-    mapping(uint => Topic) public topics;
+    mapping(uint => mapping(uint => Topic)) public topics;
     uint private p;
     mapping(uint => uint) private t;
     uint public d;
@@ -57,19 +57,19 @@ contract tCO2 is ERC721 {
     function addTopic(uint _p,string memory _name,string memory _desc) external isA returns(bool){
         if(!projects[_p].a) revert();
         projects[_p].topics.push(t[_p]);
-        topics[t[_p]] = Topic(t[_p],_p,_name,bytes(_desc));
+        topics[_p][t[_p]] = Topic(t[_p],_p,_name,bytes(_desc));
         t[_p]++;
         return true;
     }
     
-    function coinMint(uint project, uint topic) external payable {
+    function coinMint(uint _project, uint topic) external payable {
         // get usd price of matic
         // calculate on base denomination
         uint price;
         if(msg.value < price) revert();
         uint it = makeStamp();
-        uint py = projects[project].id * 10 ** 12;
-        uint ty = topics[topic].id * 10 ** 10;
+        uint py = projects[_project].id * 10 ** 12;
+        uint ty = topics[_project][topic].id * 10 ** 10;
         uint id =  py + ty + it; 
         _mint(msg.sender,id);
     }
@@ -95,15 +95,15 @@ contract tCO2 is ERC721 {
         if(token.balanceOf(msg.sender) < price) revert(); 
         uint it = makeStamp();
         uint py = projects[_project].id * 10 ** 12;
-        uint ty = topics[_topic].id * 10 ** 10;
+        uint ty = topics[_project][_topic].id * 10 ** 10;
         uint id =  py + ty + it; 
         _mint(msg.sender,id);
     } 
 
-    function aMint(uint project, uint topic) external isA {
+    function aMint(uint _project, uint topic) external isA {
         uint it = makeStamp();
-        uint py = projects[project].id * 10 ** 12;
-        uint ty = topics[topic].id * 10 ** 10;
+        uint py = projects[_project].id * 10 ** 12;
+        uint ty = topics[_project][topic].id * 10 ** 10;
         uint id =  py + ty + it; 
         _mint(msg.sender,id);
         tokenURI(id);

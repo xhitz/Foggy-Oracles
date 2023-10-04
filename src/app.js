@@ -10,13 +10,8 @@ import Draggable from "gsap/Draggable";
 gsap.registerPlugin(ScrollTrigger, Draggable, Flip);
 /*
  */
-import { setDimensions, IAO } from "./dias";
+import { setDimensions, IAO, newWidth, newHeight } from "./dias";
 setDimensions();
-
-const loadToken = (id) => {
-  console.log(IAO.layers.length);
-  IAO.layers.map((layer) => {});
-};
 
 /*
 const sdk = require("api")("@fortress/v1.0#keedbllp9wkys");
@@ -50,6 +45,39 @@ const title3 = document.getElementById("title3");
 const title4 = document.getElementById("title4");
 const title5 = document.getElementById("title5");
 const ploc = document.getElementById("project_location");
+const diascanvas = document.getElementById("diascanvas");
+const pds = document.getElementById("projectdimensions");
+const nullaya = document.getElementById("null");
+
+const loadToken = async (id) => {
+  // console.log("Layers : " + IAO.layers.length);
+
+  IAO.layers.map((layer) => {
+    // console.log("Layer ID : " + layer.id + " / " + Number(id));
+    // console.log("Layer Type : " + layer.content.type);
+    // console.log("Layer Data Path : " + layer.content.path);
+    // console.log("Layer Digits : " + layer.content.digits);
+    let path = layer.content.name == "aniname" ? layer.content.path + "/" + Math.floor(id[layer.content.digits[0]] / 2) + "/" + id[layer.content.digits[1]] : layer.content.name == "cover" ? layer.content.path + "/" + Math.floor(id[layer.content.digits[0]] / 2) + "/" + id[layer.content.digits[1]] : layer.content.name == "animal" ? layer.content.path + "/" + Math.floor(id[layer.content.digits[0]] / 2) : layer.content.path + "/" + id[layer.content.digits[0]];
+    console.log(path, layer.content.digits);
+    pds.innerHTML += `<div id="l${layer.id}" class="layertemp">
+    ${layer.content.type == "text" ? '<div id="txttemp" width=' + newWidth + " height=" + newHeight + '">"' + layer.content.path + '"</div>' : ""}
+    ${layer.content.type == "image" ? '<img id="imgtemp" src="' + path + '.png" width=' + newWidth + " height=" + newHeight + ';"/>' : ""}
+    ${layer.content.type == "video" ? '<video id="vidtemp" controls width=' + newWidth + " height=" + newHeight + '"><source src="' + path + '.mp4" /></video>' : ""}
+    ${layer.content.type == "audio" ? '<audio id="audtemp" controls  width=' + newWidth + " height=" + newHeight + '" src="' + path + '.mp3" />' : ""}
+    ${layer.content.type == "image" ? '<img id="svgtemp" src="' + layer.content.path + "/" + layer.content.digits[0] + '.svg" width=' + newWidth + " height=" + newHeight + ';"/>' : ""}
+    </div>`;
+    document.getElementById("imgtemp").style.display = "block";
+  });
+};
+const makeRandom = () => {
+  let p = Math.floor(Math.random() * 100);
+  let t = Math.floor(Math.random() * 10);
+  let n = Math.floor(Math.random() * 10000000000);
+  if (n < 10000000000) n * 9;
+  console.log("ID :: " + String(p) + String(t) + String(n));
+  loadToken(String(p) + String(t) + String(n));
+};
+setInterval(makeRandom, 5000);
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
