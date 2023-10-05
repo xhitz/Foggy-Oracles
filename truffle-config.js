@@ -31,7 +31,7 @@ module.exports = {
       confirmations: 10,
       timeoutBlocks: 900,
       gas: 3500000,
-      gasPrice: 550000000,
+      gasPrice: 6600000000,
       skipDryRun: true,
     },
     fevm: {
