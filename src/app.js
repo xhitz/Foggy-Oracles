@@ -232,20 +232,61 @@ const goLogin = (e) => {
 };
 const emptyForm = (e) => {};
 const sendContactMsg = (e) => {};
+
 const showAnimals = (e) => {
+  const projectArr = {
+    projects: [
+      {
+        id: 0,
+        location: "-----",
+        name: "Default",
+        animals: [],
+      },
+      {
+        id: 1,
+        location: "Belize",
+        name: "Maya Forest Corridor",
+        animals: [
+          {
+            id: 0,
+            name: "Howler Monkey",
+            tokensupply: 100000,
+            info: "",
+          },
+          {
+            id: 1,
+            name: "Jaguar",
+            tokensupply: 100000,
+            info: "",
+          },
+          {
+            id: 2,
+            name: "Tapir",
+            tokensupply: 100000,
+            info: "",
+          },
+          {
+            id: 3,
+            name: "Sarlet Macaw",
+            tokensupply: 100000,
+            info: "",
+          },
+          {
+            id: 4,
+            name: "Spider Monkey",
+            tokensupply: 100000,
+            info: "",
+          },
+        ],
+      },
+    ],
+  };
+
   console.log(e.target.value);
-  document.getElementById("sichuan").style.display = "none";
-  document.getElementById("suriname").style.display = "none";
-  document.getElementById("brazil").style.display = "none";
-  document.getElementById("indonesia").style.display = "none";
-  if (String(e.target.value) != "00") {
-    document.getElementById("anilabel").style.display = "block";
-    if (String(e.target.value) == "01") document.getElementById("sichuan").style.display = "grid";
-    if (String(e.target.value) == "02") document.getElementById("suriname").style.display = "grid";
-    if (String(e.target.value) == "03") document.getElementById("brazil").style.display = "grid";
-    if (String(e.target.value) == "04") document.getElementById("indonesia").style.display = "grid";
-  } else document.getElementById("anilabel").style.display = "none";
+
+  document.getElementById(String(e.target.value)).style.display = "grid";
 };
+
 close.addEventListener("click", setModal);
 cancel.addEventListener("click", setModal);
 terms.addEventListener("click", setModal);
