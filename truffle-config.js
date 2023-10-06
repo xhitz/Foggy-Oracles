@@ -19,14 +19,14 @@ module.exports = {
       network_id: "5777", // Any network (default: none)
     },
     polygon: {
-      provider: () => new HDWalletProvider(mnemonic, process.env.POLY_URL),
+      provider: () => new HDWalletProvider(mnemonic, "https://polygon-mainnet.infura.io/v3/" + process.env.INF_API),
       network_id: 137,
       confirmations: 10,
       timeoutBlocks: 200,
       skipDryRun: true,
     },
     mumbai: {
-      provider: () => new HDWalletProvider(mnemonic, process.env.MUMB_URL),
+      provider: () => new HDWalletProvider(mnemonic, "https://polygon-mumbai.infura.io/v3/" + process.env.INF_API),
       network_id: 80001,
       confirmations: 5,
       timeoutBlocks: 20000,
@@ -50,7 +50,7 @@ module.exports = {
       skipDryRun: true,
     },
     arbitrum: {
-      provider: () => new HDWalletProvider(mnemonic, process.env.ARBI_URL),
+      provider: () => new HDWalletProvider(mnemonic, "https://arbitrum.infura.io/v3/" + process.env.INF_API),
       network_id: 200,
       confirmations: 10,
       timeoutBlocks: 200,
@@ -64,7 +64,7 @@ module.exports = {
       skipDryRun: true,
     },
     optimism: {
-      provider: () => new HDWalletProvider(mnemonic, process.env.OPTI_URL),
+      provider: () => new HDWalletProvider(mnemonic, "https://optimism.infura.io/v3/" + process.env.INF_API),
       network_id: 10,
       confirmations: 10,
       timeoutBlocks: 200,
@@ -78,15 +78,22 @@ module.exports = {
       skipDryRun: true,
     },
     main: {
-      provider: () => new HDWalletProvider(mnemonic, process.env.MAIN_URL),
+      provider: () => new HDWalletProvider(mnemonic, "https://mainnet.infura.io/v3/" + process.env.INF_API),
       network_id: 1,
       confirmations: 10,
       timeoutBlocks: 200,
       skipDryRun: true,
     },
     rinkeby: {
-      provider: () => new HDWalletProvider(mnemonic, process.env.RINKEBY_URL),
+      provider: () => new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/v3/" + process.env.INF_API),
       network_id: 4,
+      confirmations: 10,
+      timeoutBlocks: 200,
+      skipDryRun: true,
+    },
+    goerli: {
+      provider: () => new HDWalletProvider(mnemonic, "https://goerli.infura.io/v3/" + process.env.INF_API),
+      network_id: 5,
       confirmations: 10,
       timeoutBlocks: 200,
       skipDryRun: true,
