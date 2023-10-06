@@ -47,7 +47,10 @@ const title5 = document.getElementById("title5");
 const ploc = document.getElementById("project_location");
 const diascanvas = document.getElementById("diascanvas");
 const pds = document.getElementById("projectdimensions");
-const nullaya = document.getElementById("null");
+const proselect = document.getElementById("project");
+const defaultPro = document.getElementById("defaultPro");
+const defaultAni = document.getElementById("defaultAni");
+const defaultOpt = document.getElementById("defaultOpt");
 
 const loadToken = async (id) => {
   // console.log("Layers : " + IAO.layers.length);
@@ -233,59 +236,83 @@ const goLogin = (e) => {
 const emptyForm = (e) => {};
 const sendContactMsg = (e) => {};
 
+let projectArr = {
+  projects: [
+    {
+      id: 0,
+      location: "-----",
+      name: "Default",
+      animals: [],
+    },
+    {
+      id: 1,
+      location: "Belize",
+      name: "Maya Forest Corridor",
+      animals: [
+        {
+          id: 0,
+          name: "Howler Monkey",
+          tokensupply: 100000,
+          info: "",
+        },
+        {
+          id: 1,
+          name: "Jaguar",
+          tokensupply: 100000,
+          info: "",
+        },
+        {
+          id: 2,
+          name: "Tapir",
+          tokensupply: 100000,
+          info: "",
+        },
+        {
+          id: 3,
+          name: "Sarlet Macaw",
+          tokensupply: 100000,
+          info: "",
+        },
+        {
+          id: 4,
+          name: "Spider Monkey",
+          tokensupply: 100000,
+          info: "",
+        },
+      ],
+    },
+  ],
+};
 const showAnimals = (e) => {
-  const projectArr = {
-    projects: [
-      {
-        id: 0,
-        location: "-----",
-        name: "Default",
-        animals: [],
-      },
-      {
-        id: 1,
-        location: "Belize",
-        name: "Maya Forest Corridor",
-        animals: [
-          {
-            id: 0,
-            name: "Howler Monkey",
-            tokensupply: 100000,
-            info: "",
-          },
-          {
-            id: 1,
-            name: "Jaguar",
-            tokensupply: 100000,
-            info: "",
-          },
-          {
-            id: 2,
-            name: "Tapir",
-            tokensupply: 100000,
-            info: "",
-          },
-          {
-            id: 3,
-            name: "Sarlet Macaw",
-            tokensupply: 100000,
-            info: "",
-          },
-          {
-            id: 4,
-            name: "Spider Monkey",
-            tokensupply: 100000,
-            info: "",
-          },
-        ],
-      },
-    ],
-  };
-
   console.log(e.target.value);
 
   document.getElementById(String(e.target.value)).style.display = "grid";
 };
+
+let mintBoxData = defaultPro;
+let animalBoxData = defaultAni;
+let optionBox = defaultOpt;
+const createAnimalSelect = (projectArr) => {
+  proselect.innerHTML = "";
+  projectArr.projects.map((project) => {
+    mintBoxData.id = project.location;
+    optionBox.id = project.location;
+    optionBox.value = project.location;
+    optionBox.innerText = project.location;
+    console.log(optionBox.outerHTML);
+    proselect.innerHTML += optionBox.outerHTML;
+    project.animals.map((animal) => {
+      animalBoxData.id = animal.name;
+      animalBoxData.value = animal.name;
+      animalBoxData.innerText = animal.name;
+      console.log(animalBoxData.outerHTML);
+      mintBoxData.innerHTML += animalBoxData.outerHTML;
+    });
+    console.log(mintBoxData.outerHTML);
+  });
+};
+
+createAnimalSelect(projectArr);
 
 close.addEventListener("click", setModal);
 cancel.addEventListener("click", setModal);

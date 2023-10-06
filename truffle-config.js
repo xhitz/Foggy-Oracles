@@ -28,10 +28,11 @@ module.exports = {
     mumbai: {
       provider: () => new HDWalletProvider(mnemonic, process.env.MUMB_URL),
       network_id: 80001,
-      confirmations: 10,
-      timeoutBlocks: 900,
-      gas: 5500000,
-      gasPrice: 6600000000,
+      confirmations: 5,
+      timeoutBlocks: 20000,
+      timeout: 100000,
+      gas: 6000000, // Gas sent with each transaction (default: ~6700000)
+      gasPrice: 3000000000,
       skipDryRun: true,
     },
     fevm: {
