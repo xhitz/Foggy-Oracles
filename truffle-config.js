@@ -26,13 +26,13 @@ module.exports = {
       skipDryRun: true,
     },
     mumbai: {
-      provider: () => new HDWalletProvider(mnemonic, "https://polygon-mumbai.infura.io/v3/" + process.env.INF_API),
+      provider: () => new HDWalletProvider(mnemonic, "https://polygon-mumbai-bor.publicnode.com" || "https://polygon-mumbai.infura.io/v3/" + process.env.INF_API),
       network_id: 80001,
-      confirmations: 5,
-      timeoutBlocks: 20000,
-      timeout: 100000,
-      gas: 6000000, // Gas sent with each transaction (default: ~6700000)
-      gasPrice: 3000000000,
+      confirmations: 2,
+      timeoutBlocks: 50,
+      gas: 9500000, // Gas sent with each transaction (default: ~6700000)
+      gasPrice: 3700000000,
+
       skipDryRun: true,
     },
     fevm: {

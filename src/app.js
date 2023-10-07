@@ -292,8 +292,10 @@ const showAnimals = (e) => {
 let mintBoxData = defaultPro;
 let animalBoxData = defaultAni;
 let optionBox = defaultOpt;
-const createAnimalSelect = (projectArr) => {
+
+const createProjectSelect = (projectArr) => {
   proselect.innerHTML = "";
+
   projectArr.projects.map((project) => {
     mintBoxData.id = project.location;
     optionBox.id = project.location;
@@ -301,19 +303,21 @@ const createAnimalSelect = (projectArr) => {
     optionBox.innerText = project.location;
     console.log(optionBox.outerHTML);
     proselect.innerHTML += optionBox.outerHTML;
-    project.animals.map((animal) => {
-      animalBoxData.id = animal.name;
-      animalBoxData.value = animal.name;
-      animalBoxData.innerText = animal.name;
-      console.log(animalBoxData.outerHTML);
-      mintBoxData.innerHTML += animalBoxData.outerHTML;
-    });
-    console.log(mintBoxData.outerHTML);
+    project.animals.length > 0
+      ? project.animals.map((animal) => {
+          animalBoxData.id = animal.name;
+          animalBoxData.value = animal.name;
+          animalBoxData.innerText = animal.name;
+          console.log(animalBoxData.outerHTML);
+          mintBoxData.innerHTML += animalBoxData.outerHTML;
+        })
+      : null;
+    mintBoxData.style.display = "grid";
   });
 };
 
-createAnimalSelect(projectArr);
-
+createProjectSelect(projectArr);
+const createAnimalSelect = (projectArr) => {};
 close.addEventListener("click", setModal);
 cancel.addEventListener("click", setModal);
 terms.addEventListener("click", setModal);
