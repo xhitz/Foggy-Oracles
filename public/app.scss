@@ -16,6 +16,7 @@ body {
   display: "grid";
   grid-template-rows: 24px 100px 1fr;
   grid-gap: 4px;
+  overflow: hidden;
 }
 #menu {
   width: 100%;
@@ -23,5 +24,4 @@ body {
   display: "grid";
   grid-template-columns: 1fr 1fr 1fr 24px 24px;
   grid-gap: 4px;
-  background: white;
 }
