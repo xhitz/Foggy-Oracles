@@ -32,5 +32,5 @@ module.exports = {
     hot: true,
     liveReload: true,
   },
-  plugins: [new HtmlWebpackPlugin({ title: "DIAS - Decentral Interactive Assets", file: "index.html", template: "public/app.html" }), new CopyWebpackPlugin({ patterns: [{ from: "public/images", to: "images" }] }), new CopyWebpackPlugin({ patterns: [{ from: "public/json", to: "json" }] })],
+  plugins: [new HtmlWebpackPlugin({ title: "DIAS - Decentral Interactive Assets", file: "index.html", template: "public/app.html" }), new CopyWebpackPlugin({ patterns: [{ from: "public/images", to: "images" }] }), new CopyWebpackPlugin({ patterns: [{ from: "manifest.json", to: "manifest.json" }] })],
 };
