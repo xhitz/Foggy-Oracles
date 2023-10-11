@@ -9,19 +9,117 @@ body {
 }
 .stage {
   width: 415px;
-  height: 100%;
+  height: 590px;
   margin: 1px;
   border-radius: 3px;
   border: chocolate 2px solid;
-  display: "grid";
-  grid-template-rows: 24px 100px 1fr;
-  grid-gap: 4px;
   overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #menu {
-  width: 100%;
+  width: 413px;
+  height: 24px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
   background: coral;
-  display: "grid";
-  grid-template-columns: 1fr 1fr 1fr 24px 24px;
-  grid-gap: 4px;
+  border-radius: 3px;
+}
+.b {
+  width: 22px;
+  height: 22px;
+  display: block;
+  background: none;
+  border: none;
+  text-align: center;
+  margin-top: 3px;
+  margin-left: 4px;
+  float: left;
+}
+.a {
+  width: 106px;
+  height: 20px;
+  border: 0;
+  padding: 0;
+  display: block;
+  background: darkslateblue;
+  color: coral;
+  font-size: 0.8em;
+  font-weight: 500;
+  float: left;
+  margin-top: 2px;
+  margin-left: 4px;
+}
+.cur {
+  height: 16px !important;
+  width: 16px !important;
+  display: inline-block;
+  opacity: 0.5;
+  background: white;
+  border-radius: 50%;
+  border: white 1px solid;
+}
+.cur:hover {
+  opacity: 1;
+}
+.logo {
+  height: 16px !important;
+  width: 90px !important;
+  display: inline-block;
+  opacity: 1;
+}
+#dashboard {
+  width: 413px;
+  height: 36px;
+  position: absolute;
+  top: 26px;
+  left: 1px;
+  border-radius: 3px;
+  background: rgba(ivory, 0.3);
+}
+#addr {
+  height: 30px;
+  width: 160px;
+  border-radius: 9px;
+  margin-left: 1px;
+  margin-top: 1px;
+  background: rgba(coral, 0.5);
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: 3px;
+  float: left;
+}
+#balance {
+  height: 30px;
+  width: 250px;
+  border-radius: 9px;
+  margin-left: 2px;
+  margin-top: 1px;
+  background: white;
+  color: rgba(coral, 0.5);
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: 3px;
+  float: left;
+}
+#actions {
+  width: 413px;
+  height: 24px;
+  position: absolute;
+  top: 72px;
+  left: 1px;
+  border-radius: 3px;
+  background: none;
+  align-content: stretch;
+}
+.action {
+  display: inline;
+  background: coral;
+  color: darkslateblue;
+  border-radius: 9px;
+  text-align: center;
+  padding: 0.6em;
 }
