@@ -1,3 +1,3 @@
-# DIAS
+# Foggy-Oracles
 
-## Decentral Interactive Assets
+## Retrieve Weather data utilizing WeatherXM stations. 
